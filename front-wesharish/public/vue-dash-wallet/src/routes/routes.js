@@ -29,9 +29,9 @@ import Notifications from "src/components/Dashboard/Views/Components/Notificatio
 import Icons from "src/components/Dashboard/Views/Components/Icons.vue";
 import Typography from "src/components/Dashboard/Views/Components/Typography.vue";
 
-import Buy from "@/components/Dashboard/Views/Buy.vue";
+//import Buy from "@/components/Dashboard/Views/Buy.vue";
+//import Send from "@/components/Dashboard/Views/Send.vue";
 import Sell from "@/components/Dashboard/Views/Sell.vue";
-import Send from "@/components/Dashboard/Views/Send.vue";
 import Support from "@/components/Dashboard/Views/Support.vue";
 import Transactions from "@/components/Dashboard/Views/Transactions.vue";
 import Settings from "@/components/Dashboard/Views/Settings.vue";
@@ -254,11 +254,11 @@ let crypto = {
   component: Crypto
 };
 
-let wallet = {
+/*let wallet = {
   path: "/checkout/wallet",
   name: "Wallet",
   component: Wallet
-};
+};*/
 
 let lockPage = {
   path: "/lock",
@@ -277,20 +277,20 @@ const routes = [
         name: "Transactions",
         component: Transactions
       },
-      {
+     /* {
         path: "buy",
         name: "Buy",
         component: Buy
-      },
-      {
+      },*/
+    /*  {
         path: "sell",
         name: "Sell",
         component: Sell
-      },
+      },*/
       {
-        path: "send",
-        name: "Send",
-        component: Send
+        path: "redeem",
+        name: "Redeem",
+        component: Sell
       },
       {
         path: "support",
@@ -330,7 +330,7 @@ const routes = [
   lockPage,
   checkoutPage,
   crypto,
-  wallet,
+  //wallet,
   {
     path: "/admin",
     component: DashboardLayout,

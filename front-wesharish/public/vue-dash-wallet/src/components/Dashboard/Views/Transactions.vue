@@ -1,5 +1,5 @@
 <template>
-  <div class="transactions">
+  <div class="">
     <div class="row">
       <div class="col-sm-12">
         <h4 class="title">
@@ -109,8 +109,8 @@
                 label="Date & time"
                 :formatter="dateFormat"
               ></el-table-column>
-              <el-table-column key="Sender" prop="userfromname" label="Sender"></el-table-column>
-              <el-table-column key="Recipient" prop="usertoname" label="Recipient"></el-table-column>
+             <!-- <el-table-column key="Sender" prop="userfromname" label="Sender"></el-table-column>-->
+             <!-- <el-table-column key="Recipient" prop="usertoname" label="Recipient"></el-table-column>-->
               <el-table-column key="Status" prop="state" label="Status"></el-table-column>
               <el-table-column key="Amount" prop="amount" label="Amount">
                 <template slot-scope="scope">

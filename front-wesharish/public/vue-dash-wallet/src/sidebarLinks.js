@@ -4,7 +4,7 @@ export default [
     icon: "nc-icon nc-bank",
     path: "/transactions"
   },
-  {
+ /* {
     name: "Market",
     icon: "nc-icon nc-shop",
     children: [
@@ -18,17 +18,17 @@ export default [
       }
 
     ]
-  },
+  },*/
   {
-    name: "Send",
+    name: "Redeem",
     icon: "nc-icon nc-send",
-    path: "/send"
+    path: "/redeem"
   },
-  {
+  /*{
     name: "Wallet",
     icon: "nc-icon nc-bag-16",
     path: "/settings"
-  },
+  },*/
   {
     name: "Support",
     icon: "nc-icon nc-support-17",

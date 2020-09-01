@@ -60,7 +60,7 @@
             </el-badge>
           </a>
 
-          <div v-for="transaction in transactionList">
+          <div v-for="(transaction,index) in transactionList" :key="index"> 
             <a
               class="dropdown-item"
               href="#"

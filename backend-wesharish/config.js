@@ -35,23 +35,23 @@ secure:"false",
     database: {
         /******connectionString:  "pg://postgres:postgres@localhost:5432/userfrosting",  *******/
       //  connectionString: "pg://postgres:postgres@18.220.209.238:5432/userfrosting", //local database connection  
-        connectionString:  "pg://postgres:postgres@localhost:5432/sagecity", //local database connection      
+        connectionString:  "pg://postgres:postgres@localhost:5432/sqoin", //local database connection      
     },
      dbpool : new Pool({
         user: 'postgres',
        // host: '18.220.209.238',
         host:'localhost',
-       database: 'sagecity',
+       database: 'sqoin',
      //  database: 'userfrosting',
       // password: 'postgres',
-        password: 'J2VgcQnEUNCjry88',
+        password: 'zita123',
         port: 5432,
         max: 10,
         idleTimeoutMillis:30000}),
 
     dbConfig: {
         "user": "postgres",
-        "database": "userfrosting",
+        "database": "sqoin",
         "port": 5432,
         "max": 10, // max number of clients in the pool
         "idleTimeoutMillis": 30000

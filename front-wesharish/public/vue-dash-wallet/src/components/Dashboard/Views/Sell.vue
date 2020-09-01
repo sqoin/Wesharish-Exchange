@@ -5,7 +5,7 @@
         <card card-body-classes="text-center">
           <h4 slot="header" class="card-title">
             <i class="el-icon-sell"></i>
-            Sell Coins
+           Redeem Coins
           </h4>
           <h6 v-if="model.coin">
             Balance:
@@ -39,7 +39,7 @@
               ></el-input>
             </fg-input>
           </div>
-          <p-button type="warning" :disabled="isDisabled" round outline @click="onSubmit">Sell</p-button>
+          <p-button type="warning" :disabled="isDisabled" round outline @click="onSubmit">Redeem</p-button>
         </card>
       </div>
     </div>
