@@ -1,0 +1,1714 @@
+
+
+/usr/local/bin/node /home/sqoin/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[10:19:09] Using gulpfile ~/userfrosting/build/gulpfile.esm.js
+[10:19:09] Starting 'assetsInstall'...
+[10:19:09] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[10:19:09] Installing vendor assets with NPM...
+[10:19:09] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/home/sqoin/userfrosting/app/assets/package.json'
+All done!
+[10:19:09] Dependency collation complete.
+[10:19:09] Using npm from PATH variable
+[10:19:09] Removing extraneous dependencies
+[10:19:09] CMD: Running command "npm prune"
+[10:19:11] CMD> npm prune: up to date in 0.895s
+[10:19:11] CMD> npm prune: found 0 vulnerabilities
+[10:19:11] CMD> npm prune: 
+[10:19:11] CMD> npm prune: 
+[10:19:11] CMD: Command "npm prune" has completed successfully
+[10:19:11] Installing dependencies
+[10:19:11] CMD: Running command "npm install"
+[10:19:18] CMD> npm install: added 44 packages from 89 contributors and audited 51 packages in 6.252s
+[10:19:18] CMD> npm install: found 2 high severity vulnerabilities
+[10:19:18] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[10:19:18] CMD> npm install: 
+[10:19:18] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[10:19:18] CMD> npm install: 
+[10:19:18] CMD: Command "npm install" has completed successfully
+[10:19:18] Running audit
+[10:19:18] CMD: Running command "npm audit"
+[10:19:19] CMD> npm audit: === npm audit security report ===                        
+[10:19:19] CMD> npm audit:                                                                                 
+[10:19:19] CMD> npm audit: # Run  npm install handlebars@4.1.2  to resolve 2 vulnerabilities
+[10:19:19] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[10:19:19] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[10:19:19] CMD> npm audit: │ High          │ Prototype Pollution                                          │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Package       │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Path          │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ More info     │ https://nodesecurity.io/advisories/755                       │
+[10:19:19] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[10:19:19] CMD> npm audit: 
+[10:19:19] CMD> npm audit: 
+[10:19:19] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[10:19:19] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Package       │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ Path          │ handlebars                                                   │
+[10:19:19] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[10:19:19] CMD> npm audit: │ More info     │ https://nodesecurity.io/advisories/61                        │
+[10:19:19] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[10:19:19] CMD> npm audit: 
+[10:19:19] CMD> npm audit: 
+[10:19:19] CMD> npm audit: found 2 high severity vulnerabilities in 51 scanned packages
+[10:19:19] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[10:19:19] CMD> npm audit: 
+[10:19:19] CMD: Command "npm audit" has completed with an error
+[10:19:19] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[10:19:19] Running browserify against npm dependencies with a compatible main entrypoint
+[10:19:21] Finished 'assetsInstall' after 12 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[10:49:34] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[10:49:34] Starting 'assetsInstall'...
+[10:49:34] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[10:49:34] Installing vendor assets with NPM...
+[10:49:34] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[10:49:34] Dependency collation complete.
+[10:49:34] Using npm from PATH variable
+[10:49:34] Removing extraneous dependencies
+[10:49:34] CMD: Running command "npm prune"
+[10:49:40] CMD> npm prune: audited 51 packages in 3.372s
+[10:49:40] CMD> npm prune: found 2 high severity vulnerabilities
+[10:49:40] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[10:49:40] CMD> npm prune: 
+[10:49:40] CMD: Command "npm prune" has completed successfully
+[10:49:40] Installing dependencies
+[10:49:40] CMD: Running command "npm install"
+[10:49:43] CMD> npm install: audited 51 packages in 1.693s
+[10:49:43] CMD> npm install: found 2 high severity vulnerabilities
+[10:49:43] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[10:49:43] CMD> npm install: 
+[10:49:43] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[10:49:43] CMD> npm install: 
+[10:49:43] CMD: Command "npm install" has completed successfully
+[10:49:43] Running audit
+[10:49:43] CMD: Running command "npm audit"
+[10:49:45] CMD> npm audit: npm ERR! path /home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e
+[10:49:45] CMD> npm audit: npm ERR! code EACCES
+[10:49:45] CMD> npm audit: npm ERR! errno -13
+[10:49:45] CMD> npm audit: npm ERR! syscall open
+[10:49:45] CMD> npm audit: npm ERR! Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[10:49:45] CMD> npm audit: npm ERR!  { [Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e']
+[10:49:45] CMD> npm audit: npm ERR!   cause:
+[10:49:45] CMD> npm audit: npm ERR!    { Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[10:49:45] CMD> npm audit: npm ERR!      errno: -13,
+[10:49:45] CMD> npm audit: npm ERR!      code: 'EACCES',
+[10:49:45] CMD> npm audit: npm ERR!      syscall: 'open',
+[10:49:45] CMD> npm audit: npm ERR!      path:
+[10:49:45] CMD> npm audit: npm ERR!       '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' },
+[10:49:45] CMD> npm audit: npm ERR!   isOperational: true,
+[10:49:45] CMD> npm audit: npm ERR!   stack:
+[10:49:45] CMD> npm audit: npm ERR!    'Error: EACCES: permission denied, open \'/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e\'',
+[10:49:45] CMD> npm audit: npm ERR!   errno: -13,
+[10:49:45] CMD> npm audit: npm ERR!   code: 'EACCES',
+[10:49:45] CMD> npm audit: npm ERR!   syscall: 'open',
+[10:49:45] CMD> npm audit: npm ERR!   path:
+[10:49:45] CMD> npm audit: npm ERR!    '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' }
+[10:49:45] CMD> npm audit: npm ERR! 
+[10:49:45] CMD> npm audit: npm ERR! The operation was rejected by your operating system.
+[10:49:45] CMD> npm audit: npm ERR! It is likely you do not have the permissions to access this file as the current user
+[10:49:45] CMD> npm audit: npm ERR! 
+[10:49:45] CMD> npm audit: npm ERR! If you believe this might be a permissions issue, please double-check the
+[10:49:45] CMD> npm audit: npm ERR! permissions of the file and its containing directories, or try running
+[10:49:45] CMD> npm audit: npm ERR! the command again as root/Administrator (though this is not recommended).
+[10:49:45] CMD> npm audit: 
+[10:49:45] CMD> npm audit: npm ERR! A complete log of this run can be found in:
+[10:49:45] CMD> npm audit: npm ERR!     /home/sqoin/.npm/_logs/2019-05-13T09_49_45_143Z-debug.log
+[10:49:45] CMD> npm audit: 
+[10:49:45] CMD: Command "npm audit" has completed with an error
+[10:49:45] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[10:49:45] Running browserify against npm dependencies with a compatible main entrypoint
+[10:49:46] Finished 'assetsInstall' after 13 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[11:15:21] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[11:15:21] Starting 'assetsInstall'...
+[11:15:21] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[11:15:21] Installing vendor assets with NPM...
+[11:15:21] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[11:15:21] Dependency collation complete.
+[11:15:21] Using npm from PATH variable
+[11:15:21] Removing extraneous dependencies
+[11:15:21] CMD: Running command "npm prune"
+[11:15:23] CMD> npm prune: audited 51 packages in 1.511s
+[11:15:23] CMD> npm prune: found 2 high severity vulnerabilities
+[11:15:23] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:15:23] CMD> npm prune: 
+[11:15:23] CMD: Command "npm prune" has completed successfully
+[11:15:23] Installing dependencies
+[11:15:23] CMD: Running command "npm install"
+[11:15:25] CMD> npm install: audited 51 packages in 1.044s
+[11:15:25] CMD> npm install: found 2 high severity vulnerabilities
+[11:15:25] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:15:25] CMD> npm install: 
+[11:15:25] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[11:15:25] CMD> npm install: 
+[11:15:25] CMD: Command "npm install" has completed successfully
+[11:15:25] Running audit
+[11:15:25] CMD: Running command "npm audit"
+[11:15:27] CMD> npm audit: npm ERR! path /home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e
+[11:15:27] CMD> npm audit: npm ERR! code EACCES
+[11:15:27] CMD> npm audit: npm ERR! errno -13
+[11:15:27] CMD> npm audit: npm ERR! syscall open
+[11:15:27] CMD> npm audit: npm ERR! Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[11:15:27] CMD> npm audit: npm ERR!  { [Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e']
+[11:15:27] CMD> npm audit: npm ERR!   cause:
+[11:15:27] CMD> npm audit: npm ERR!    { Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[11:15:27] CMD> npm audit: npm ERR!      errno: -13,
+[11:15:27] CMD> npm audit: npm ERR!      code: 'EACCES',
+[11:15:27] CMD> npm audit: npm ERR!      syscall: 'open',
+[11:15:27] CMD> npm audit: npm ERR!      path:
+[11:15:27] CMD> npm audit: npm ERR!       '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' },
+[11:15:27] CMD> npm audit: npm ERR!   isOperational: true,
+[11:15:27] CMD> npm audit: npm ERR!   stack:
+[11:15:27] CMD> npm audit: npm ERR!    'Error: EACCES: permission denied, open \'/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e\'',
+[11:15:27] CMD> npm audit: npm ERR!   errno: -13,
+[11:15:27] CMD> npm audit: npm ERR!   code: 'EACCES',
+[11:15:27] CMD> npm audit: npm ERR!   syscall: 'open',
+[11:15:27] CMD> npm audit: npm ERR!   path:
+[11:15:27] CMD> npm audit: npm ERR!    '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' }
+[11:15:27] CMD> npm audit: npm ERR! 
+[11:15:27] CMD> npm audit: npm ERR! The operation was rejected by your operating system.
+[11:15:27] CMD> npm audit: npm ERR! It is likely you do not have the permissions to access this file as the current user
+[11:15:27] CMD> npm audit: npm ERR! 
+[11:15:27] CMD> npm audit: npm ERR! If you believe this might be a permissions issue, please double-check the
+[11:15:27] CMD> npm audit: npm ERR! permissions of the file and its containing directories, or try running
+[11:15:27] CMD> npm audit: npm ERR! the command again as root/Administrator (though this is not recommended).
+[11:15:27] CMD> npm audit: 
+[11:15:27] CMD> npm audit: npm ERR! A complete log of this run can be found in:
+[11:15:27] CMD> npm audit: npm ERR!     /home/sqoin/.npm/_logs/2019-05-13T10_15_27_544Z-debug.log
+[11:15:27] CMD> npm audit: 
+[11:15:27] CMD: Command "npm audit" has completed with an error
+[11:15:27] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[11:15:27] Running browserify against npm dependencies with a compatible main entrypoint
+[11:15:29] Finished 'assetsInstall' after 7.45 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[11:23:25] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[11:23:25] Starting 'assetsInstall'...
+[11:23:25] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[11:23:25] Installing vendor assets with NPM...
+[11:23:25] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[11:23:26] Dependency collation complete.
+[11:23:26] Using npm from PATH variable
+[11:23:26] Removing extraneous dependencies
+[11:23:26] CMD: Running command "npm prune"
+[11:23:38] CMD> npm prune: audited 51 packages in 8.837s
+[11:23:38] CMD> npm prune: found 2 high severity vulnerabilities
+[11:23:38] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:23:38] CMD> npm prune: 
+[11:23:38] CMD: Command "npm prune" has completed successfully
+[11:23:38] Installing dependencies
+[11:23:38] CMD: Running command "npm install"
+[11:23:42] CMD> npm install: audited 51 packages in 3.023s
+[11:23:42] CMD> npm install: found 2 high severity vulnerabilities
+[11:23:42] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:23:42] CMD> npm install: 
+[11:23:42] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[11:23:42] CMD> npm install: 
+[11:23:42] CMD: Command "npm install" has completed successfully
+[11:23:42] Running audit
+[11:23:42] CMD: Running command "npm audit"
+[11:23:44] CMD> npm audit: npm ERR! path /home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e
+[11:23:44] CMD> npm audit: npm ERR! code EACCES
+[11:23:44] CMD> npm audit: npm ERR! errno -13
+[11:23:44] CMD> npm audit: npm ERR! syscall open
+[11:23:44] CMD> npm audit: npm ERR! Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[11:23:44] CMD> npm audit: npm ERR!  { [Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e']
+[11:23:44] CMD> npm audit: npm ERR!   cause:
+[11:23:44] CMD> npm audit: npm ERR!    { Error: EACCES: permission denied, open '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e'
+[11:23:44] CMD> npm audit: npm ERR!      errno: -13,
+[11:23:44] CMD> npm audit: npm ERR!      code: 'EACCES',
+[11:23:44] CMD> npm audit: npm ERR!      syscall: 'open',
+[11:23:44] CMD> npm audit: npm ERR!      path:
+[11:23:44] CMD> npm audit: npm ERR!       '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' },
+[11:23:44] CMD> npm audit: npm ERR!   isOperational: true,
+[11:23:44] CMD> npm audit: npm ERR!   stack:
+[11:23:44] CMD> npm audit: npm ERR!    'Error: EACCES: permission denied, open \'/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e\'',
+[11:23:44] CMD> npm audit: npm ERR!   errno: -13,
+[11:23:44] CMD> npm audit: npm ERR!   code: 'EACCES',
+[11:23:44] CMD> npm audit: npm ERR!   syscall: 'open',
+[11:23:44] CMD> npm audit: npm ERR!   path:
+[11:23:44] CMD> npm audit: npm ERR!    '/home/sqoin/.npm/index-v5/2b/b7/5605911c6e8a323c274c5905a25a7425d38df8289efa2b50cc0e37b1dd4e' }
+[11:23:44] CMD> npm audit: npm ERR! 
+[11:23:44] CMD> npm audit: npm ERR! The operation was rejected by your operating system.
+[11:23:44] CMD> npm audit: npm ERR! It is likely you do not have the permissions to access this file as the current user
+[11:23:44] CMD> npm audit: npm ERR! 
+[11:23:44] CMD> npm audit: npm ERR! If you believe this might be a permissions issue, please double-check the
+[11:23:44] CMD> npm audit: npm ERR! permissions of the file and its containing directories, or try running
+[11:23:44] CMD> npm audit: npm ERR! the command again as root/Administrator (though this is not recommended).
+[11:23:44] CMD> npm audit: 
+[11:23:44] CMD> npm audit: npm ERR! A complete log of this run can be found in:
+[11:23:44] CMD> npm audit: npm ERR!     /home/sqoin/.npm/_logs/2019-05-20T10_23_44_624Z-debug.log
+[11:23:44] CMD> npm audit: 
+[11:23:44] CMD: Command "npm audit" has completed with an error
+[11:23:44] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[11:23:44] Running browserify against npm dependencies with a compatible main entrypoint
+[11:23:46] Finished 'assetsInstall' after 21 s
+
+
+/usr/local/bin/node /usr/local/bin/gulp assetsInstall
+
+[13:54:04] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[13:54:04] Starting 'assetsInstall'...
+[13:54:04] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[13:54:04] Installing vendor assets with NPM...
+[13:54:04] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[13:54:04] Dependency collation complete.
+[13:54:04] Using npm from PATH variable
+[13:54:04] Removing extraneous dependencies
+[13:54:04] CMD: Running command "npm prune"
+[13:54:06] CMD> npm prune: up to date in 0.631s
+[13:54:06] CMD> npm prune: found 0 vulnerabilities
+[13:54:06] CMD> npm prune: 
+[13:54:06] CMD> npm prune: 
+[13:54:06] CMD: Command "npm prune" has completed successfully
+[13:54:06] Installing dependencies
+[13:54:06] CMD: Running command "npm install"
+[13:54:11] CMD> npm install: added 42 packages from 89 contributors and audited 49 packages in 4.353s
+[13:54:11] CMD> npm install: found 2 high severity vulnerabilities
+[13:54:11] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[13:54:11] CMD> npm install: 
+[13:54:11] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[13:54:11] CMD> npm install: 
+[13:54:11] CMD: Command "npm install" has completed successfully
+[13:54:11] Running audit
+[13:54:11] CMD: Running command "npm audit"
+[13:54:12] CMD> npm audit:                                                                                 
+[13:54:12] CMD> npm audit:                        === npm audit security report ===                        
+[13:54:12] CMD> npm audit:                                                                                 
+[13:54:12] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[13:54:12] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[13:54:12] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[13:54:12] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Package       │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Path          │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[13:54:12] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[13:54:12] CMD> npm audit: 
+[13:54:12] CMD> npm audit: 
+[13:54:12] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[13:54:12] CMD> npm audit: │ High          │ Prototype Pollution                                          │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Package       │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ Path          │ handlebars                                                   │
+[13:54:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:54:12] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[13:54:12] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[13:54:12] CMD> npm audit: 
+[13:54:12] CMD> npm audit: 
+[13:54:12] CMD> npm audit: found 2 high severity vulnerabilities in 49 scanned packages
+[13:54:12] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[13:54:12] CMD> npm audit: 
+[13:54:12] CMD: Command "npm audit" has completed with an error
+[13:54:12] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[13:54:12] Running browserify against npm dependencies with a compatible main entrypoint
+[13:54:13] Finished 'assetsInstall' after 8.35 s
+
+
+/usr/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[18:15:48] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[18:15:48] Starting 'assetsInstall'...
+[18:15:48] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[18:15:48] Installing vendor assets with NPM...
+[18:15:48] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[18:15:48] Dependency collation complete.
+[18:15:48] Using npm from PATH variable
+[18:15:48] Removing extraneous dependencies
+[18:15:48] CMD: Running command "npm prune"
+[18:15:49] CMD> npm prune: audited 49 packages in 1.019s
+[18:15:49] CMD> npm prune: found 2 high severity vulnerabilities
+[18:15:49] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[18:15:49] CMD> npm prune: 
+[18:15:49] CMD: Command "npm prune" has completed successfully
+[18:15:49] Installing dependencies
+[18:15:49] CMD: Running command "npm install"
+[18:15:50] CMD> npm install: audited 49 packages in 0.723s
+[18:15:50] CMD> npm install: found 2 high severity vulnerabilities
+[18:15:50] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[18:15:50] CMD> npm install: 
+[18:15:50] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[18:15:50] CMD> npm install: 
+[18:15:50] CMD: Command "npm install" has completed successfully
+[18:15:50] Running audit
+[18:15:50] CMD: Running command "npm audit"
+[18:15:52] CMD> npm audit:                                                                                 
+[18:15:52] CMD> npm audit:                        === npm audit security report ===                        
+[18:15:52] CMD> npm audit:                                                                                 
+[18:15:52] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[18:15:52] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[18:15:52] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[18:15:52] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Package       │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Path          │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[18:15:52] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[18:15:52] CMD> npm audit: 
+[18:15:52] CMD> npm audit: 
+[18:15:52] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[18:15:52] CMD> npm audit: │ High          │ Prototype Pollution                                          │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Package       │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ Path          │ handlebars                                                   │
+[18:15:52] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[18:15:52] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[18:15:52] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[18:15:52] CMD> npm audit: 
+[18:15:52] CMD> npm audit: 
+[18:15:52] CMD> npm audit: found 2 high severity vulnerabilities in 49 scanned packages
+[18:15:52] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[18:15:52] CMD> npm audit: 
+[18:15:52] CMD: Command "npm audit" has completed with an error
+[18:15:52] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[18:15:52] Running browserify against npm dependencies with a compatible main entrypoint
+[18:15:54] Finished 'assetsInstall' after 5.98 s
+
+
+/usr/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[12:43:13] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[12:43:13] Starting 'assetsInstall'...
+[12:43:13] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[12:43:13] Installing vendor assets with NPM...
+[12:43:13] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[12:43:13] Dependency collation complete.
+[12:43:13] Using npm from PATH variable
+[12:43:13] Removing extraneous dependencies
+[12:43:13] CMD: Running command "npm prune"
+[12:43:14] CMD> npm prune: audited 49 packages in 0.621s
+[12:43:14] CMD> npm prune: found 2 high severity vulnerabilities
+[12:43:14] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:43:14] CMD> npm prune: 
+[12:43:14] CMD: Command "npm prune" has completed successfully
+[12:43:14] Installing dependencies
+[12:43:14] CMD: Running command "npm install"
+[12:43:16] CMD> npm install: audited 49 packages in 1.278s
+[12:43:16] CMD> npm install: found 2 high severity vulnerabilities
+[12:43:16] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:43:16] CMD> npm install: 
+[12:43:16] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[12:43:16] CMD> npm install: 
+[12:43:16] CMD: Command "npm install" has completed successfully
+[12:43:16] Running audit
+[12:43:16] CMD: Running command "npm audit"
+[12:43:17] CMD> npm audit:                                                                                 
+[12:43:17] CMD> npm audit:                        === npm audit security report ===                        
+[12:43:17] CMD> npm audit:                                                                                 
+[12:43:17] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[12:43:17] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[12:43:17] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[12:43:17] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Package       │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Path          │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[12:43:17] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[12:43:17] CMD> npm audit: 
+[12:43:17] CMD> npm audit: 
+[12:43:17] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[12:43:17] CMD> npm audit: │ High          │ Prototype Pollution                                          │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Package       │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ Path          │ handlebars                                                   │
+[12:43:17] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:43:17] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[12:43:17] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[12:43:17] CMD> npm audit: 
+[12:43:17] CMD> npm audit: 
+[12:43:17] CMD> npm audit: found 2 high severity vulnerabilities in 49 scanned packages
+[12:43:17] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[12:43:17] CMD> npm audit: 
+[12:43:17] CMD: Command "npm audit" has completed with an error
+[12:43:17] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[12:43:17] Running browserify against npm dependencies with a compatible main entrypoint
+[12:43:18] Finished 'assetsInstall' after 5.68 s
+
+
+/usr/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[13:55:09] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[13:55:09] Starting 'assetsInstall'...
+[13:55:09] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[13:55:09] Installing vendor assets with NPM...
+[13:55:09] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[13:55:09] Dependency collation complete.
+[13:55:09] Using npm from PATH variable
+[13:55:09] Removing extraneous dependencies
+[13:55:09] CMD: Running command "npm prune"
+[13:55:10] CMD> npm prune: audited 49 packages in 0.711s
+[13:55:10] CMD> npm prune: found 2 high severity vulnerabilities
+[13:55:10] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[13:55:10] CMD> npm prune: 
+[13:55:10] CMD: Command "npm prune" has completed successfully
+[13:55:10] Installing dependencies
+[13:55:10] CMD: Running command "npm install"
+[13:55:12] CMD> npm install: audited 49 packages in 0.659s
+[13:55:12] CMD> npm install: found 2 high severity vulnerabilities
+[13:55:12] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[13:55:12] CMD> npm install: 
+[13:55:12] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[13:55:12] CMD> npm install: 
+[13:55:12] CMD: Command "npm install" has completed successfully
+[13:55:12] Running audit
+[13:55:12] CMD: Running command "npm audit"
+[13:55:13] CMD> npm audit:                                                                                 
+[13:55:13] CMD> npm audit:                        === npm audit security report ===                        
+[13:55:13] CMD> npm audit:                                                                                 
+[13:55:13] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[13:55:13] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[13:55:13] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[13:55:13] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Package       │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Path          │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[13:55:13] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[13:55:13] CMD> npm audit: 
+[13:55:13] CMD> npm audit: 
+[13:55:13] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[13:55:13] CMD> npm audit: │ High          │ Prototype Pollution                                          │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Package       │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ Path          │ handlebars                                                   │
+[13:55:13] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[13:55:13] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[13:55:13] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[13:55:13] CMD> npm audit: 
+[13:55:13] CMD> npm audit: 
+[13:55:13] CMD> npm audit: found 2 high severity vulnerabilities in 49 scanned packages
+[13:55:13] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[13:55:13] CMD> npm audit: 
+[13:55:13] CMD: Command "npm audit" has completed with an error
+[13:55:13] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[13:55:13] Running browserify against npm dependencies with a compatible main entrypoint
+[13:55:15] Finished 'assetsInstall' after 5.86 s
+
+
+/usr/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[14:56:50] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[14:56:50] Starting 'assetsInstall'...
+[14:56:50] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[14:56:50] Installing vendor assets with NPM...
+[14:56:50] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[14:56:50] Dependency collation complete.
+[14:56:50] Using npm from PATH variable
+[14:56:50] Removing extraneous dependencies
+[14:56:50] CMD: Running command "npm prune"
+[14:56:52] CMD> npm prune: audited 49 packages in 0.842s
+[14:56:52] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[14:56:52] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[14:56:52] CMD> npm prune: 
+[14:56:52] CMD: Command "npm prune" has completed successfully
+[14:56:52] Installing dependencies
+[14:56:52] CMD: Running command "npm install"
+[14:56:53] CMD> npm install: audited 49 packages in 0.643s
+[14:56:53] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[14:56:53] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[14:56:53] CMD> npm install: 
+[14:56:53] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[14:56:53] CMD> npm install: 
+[14:56:53] CMD: Command "npm install" has completed successfully
+[14:56:53] Running audit
+[14:56:53] CMD: Running command "npm audit"
+[14:56:55] CMD> npm audit:                                                                                 
+[14:56:55] CMD> npm audit:                        === npm audit security report ===                        
+[14:56:55] CMD> npm audit:                                                                                 
+[14:56:55] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[14:56:55] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[14:56:55] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[14:56:55] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Package       │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Path          │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[14:56:55] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[14:56:55] CMD> npm audit: 
+[14:56:55] CMD> npm audit: 
+[14:56:55] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[14:56:55] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Package       │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ Path          │ handlebars                                                   │
+[14:56:55] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[14:56:55] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[14:56:55] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[14:56:55] CMD> npm audit: 
+[14:56:55] CMD> npm audit: 
+[14:56:55] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[14:56:55] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[14:56:55] CMD> npm audit: 
+[14:56:55] CMD: Command "npm audit" has completed with an error
+[14:56:55] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[14:56:55] Running browserify against npm dependencies with a compatible main entrypoint
+[14:56:57] Finished 'assetsInstall' after 6.48 s
+
+
+/usr/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[16:45:13] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[16:45:13] Starting 'assetsInstall'...
+[16:45:13] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[16:45:13] Installing vendor assets with NPM...
+[16:45:13] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[16:45:13] Dependency collation complete.
+[16:45:13] Using npm from PATH variable
+[16:45:13] Removing extraneous dependencies
+[16:45:13] CMD: Running command "npm prune"
+[16:45:15] CMD> npm prune: audited 49 packages in 1.316s
+[16:45:15] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[16:45:15] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:45:15] CMD> npm prune: 
+[16:45:15] CMD: Command "npm prune" has completed successfully
+[16:45:15] Installing dependencies
+[16:45:15] CMD: Running command "npm install"
+[16:45:17] CMD> npm install: audited 49 packages in 1.265s
+[16:45:17] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[16:45:17] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:45:17] CMD> npm install: 
+[16:45:17] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[16:45:17] CMD> npm install: 
+[16:45:17] CMD: Command "npm install" has completed successfully
+[16:45:17] Running audit
+[16:45:17] CMD: Running command "npm audit"
+[16:45:18] CMD> npm audit:                                                                                 
+[16:45:18] CMD> npm audit:                        === npm audit security report ===                        
+[16:45:18] CMD> npm audit:                                                                                 
+[16:45:18] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[16:45:18] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[16:45:18] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:45:18] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[16:45:18] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:45:18] CMD> npm audit: 
+[16:45:18] CMD> npm audit: 
+[16:45:18] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:45:18] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:45:18] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:45:18] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[16:45:18] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:45:18] CMD> npm audit: 
+[16:45:18] CMD> npm audit: 
+[16:45:18] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[16:45:18] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[16:45:18] CMD> npm audit: 
+[16:45:18] CMD: Command "npm audit" has completed with an error
+[16:45:18] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[16:45:18] Running browserify against npm dependencies with a compatible main entrypoint
+[16:45:20] Finished 'assetsInstall' after 7.35 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[16:53:31] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[16:53:31] Starting 'assetsInstall'...
+[16:53:31] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[16:53:31] Installing vendor assets with NPM...
+[16:53:31] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[16:53:31] Dependency collation complete.
+[16:53:31] Using npm from PATH variable
+[16:53:31] Removing extraneous dependencies
+[16:53:31] CMD: Running command "npm prune"
+[16:53:33] CMD> npm prune: audited 49 packages in 0.759s
+[16:53:33] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[16:53:33] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:53:33] CMD> npm prune: 
+[16:53:33] CMD: Command "npm prune" has completed successfully
+[16:53:33] Installing dependencies
+[16:53:33] CMD: Running command "npm install"
+[16:53:35] CMD> npm install: audited 49 packages in 0.877s
+[16:53:35] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[16:53:35] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:53:35] CMD> npm install: 
+[16:53:35] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[16:53:35] CMD> npm install: 
+[16:53:35] CMD: Command "npm install" has completed successfully
+[16:53:35] Running audit
+[16:53:35] CMD: Running command "npm audit"
+[16:53:36] CMD> npm audit:                                                                                 
+[16:53:36] CMD> npm audit:                        === npm audit security report ===                        
+[16:53:36] CMD> npm audit:                                                                                 
+[16:53:36] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[16:53:36] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[16:53:36] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:53:36] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[16:53:36] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:53:36] CMD> npm audit: 
+[16:53:36] CMD> npm audit: 
+[16:53:36] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:53:36] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:53:36] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:53:36] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[16:53:36] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:53:36] CMD> npm audit: 
+[16:53:36] CMD> npm audit: 
+[16:53:36] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[16:53:36] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[16:53:36] CMD> npm audit: 
+[16:53:36] CMD: Command "npm audit" has completed with an error
+[16:53:36] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[16:53:36] Running browserify against npm dependencies with a compatible main entrypoint
+[16:53:38] Finished 'assetsInstall' after 6.33 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[11:06:07] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[11:06:07] Starting 'assetsInstall'...
+[11:06:07] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[11:06:07] Installing vendor assets with NPM...
+[11:06:07] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[11:06:07] Dependency collation complete.
+[11:06:07] Using npm from PATH variable
+[11:06:07] Removing extraneous dependencies
+[11:06:07] CMD: Running command "npm prune"
+[11:06:09] CMD> npm prune: audited 49 packages in 1.2s
+[11:06:09] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[11:06:09] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:06:09] CMD> npm prune: 
+[11:06:09] CMD: Command "npm prune" has completed successfully
+[11:06:09] Installing dependencies
+[11:06:09] CMD: Running command "npm install"
+[11:06:11] CMD> npm install: audited 49 packages in 0.795s
+[11:06:11] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[11:06:11] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[11:06:11] CMD> npm install: 
+[11:06:11] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[11:06:11] CMD> npm install: 
+[11:06:11] CMD: Command "npm install" has completed successfully
+[11:06:11] Running audit
+[11:06:11] CMD: Running command "npm audit"
+[11:06:12] CMD> npm audit:                                                                                 
+[11:06:12] CMD> npm audit:                        === npm audit security report ===                        
+[11:06:12] CMD> npm audit:                                                                                 
+[11:06:12] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[11:06:12] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[11:06:12] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[11:06:12] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Package       │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Path          │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[11:06:12] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[11:06:12] CMD> npm audit: 
+[11:06:12] CMD> npm audit: 
+[11:06:12] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[11:06:12] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Package       │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ Path          │ handlebars                                                   │
+[11:06:12] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[11:06:12] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[11:06:12] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[11:06:12] CMD> npm audit: 
+[11:06:12] CMD> npm audit: 
+[11:06:12] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[11:06:12] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[11:06:12] CMD> npm audit: 
+[11:06:12] CMD: Command "npm audit" has completed with an error
+[11:06:12] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[11:06:12] Running browserify against npm dependencies with a compatible main entrypoint
+[11:06:14] Finished 'assetsInstall' after 7.01 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[12:28:03] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[12:28:03] Starting 'assetsInstall'...
+[12:28:03] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[12:28:03] Installing vendor assets with NPM...
+[12:28:03] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[12:28:03] Dependency collation complete.
+[12:28:03] Using npm from PATH variable
+[12:28:03] Removing extraneous dependencies
+[12:28:03] CMD: Running command "npm prune"
+[12:28:05] CMD> npm prune: audited 49 packages in 0.82s
+[12:28:05] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[12:28:05] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:28:05] CMD> npm prune: 
+[12:28:05] CMD: Command "npm prune" has completed successfully
+[12:28:05] Installing dependencies
+[12:28:05] CMD: Running command "npm install"
+[12:28:06] CMD> npm install: audited 49 packages in 0.933s
+[12:28:06] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[12:28:06] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:28:06] CMD> npm install: 
+[12:28:06] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[12:28:06] CMD> npm install: 
+[12:28:06] CMD: Command "npm install" has completed successfully
+[12:28:06] Running audit
+[12:28:06] CMD: Running command "npm audit"
+[12:28:08] CMD> npm audit:                                                                                 
+[12:28:08] CMD> npm audit:                        === npm audit security report ===                        
+[12:28:08] CMD> npm audit:                                                                                 
+[12:28:08] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[12:28:08] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[12:28:08] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[12:28:08] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Package       │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Path          │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[12:28:08] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[12:28:08] CMD> npm audit: 
+[12:28:08] CMD> npm audit: 
+[12:28:08] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[12:28:08] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Package       │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ Path          │ handlebars                                                   │
+[12:28:08] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[12:28:08] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[12:28:08] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[12:28:08] CMD> npm audit: 
+[12:28:08] CMD> npm audit: 
+[12:28:08] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[12:28:08] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[12:28:08] CMD> npm audit: 
+[12:28:08] CMD: Command "npm audit" has completed with an error
+[12:28:08] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[12:28:08] Running browserify against npm dependencies with a compatible main entrypoint
+[12:28:10] Finished 'assetsInstall' after 7.43 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[15:39:43] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[15:39:43] Starting 'assetsInstall'...
+[15:39:43] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[15:39:43] Installing vendor assets with NPM...
+[15:39:43] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[15:39:43] Dependency collation complete.
+[15:39:43] Using npm from PATH variable
+[15:39:43] Removing extraneous dependencies
+[15:39:43] CMD: Running command "npm prune"
+[15:39:45] CMD> npm prune: audited 49 packages in 0.778s
+[15:39:45] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[15:39:45] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[15:39:45] CMD> npm prune: 
+[15:39:45] CMD: Command "npm prune" has completed successfully
+[15:39:45] Installing dependencies
+[15:39:45] CMD: Running command "npm install"
+[15:39:47] CMD> npm install: audited 49 packages in 0.806s
+[15:39:47] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[15:39:47] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[15:39:47] CMD> npm install: 
+[15:39:47] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[15:39:47] CMD> npm install: 
+[15:39:47] CMD: Command "npm install" has completed successfully
+[15:39:47] Running audit
+[15:39:47] CMD: Running command "npm audit"
+[15:39:49] CMD> npm audit:                                                                                 
+[15:39:49] CMD> npm audit:                        === npm audit security report ===                        
+[15:39:49] CMD> npm audit:                                                                                 
+[15:39:49] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[15:39:49] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[15:39:49] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[15:39:49] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Package       │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Path          │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[15:39:49] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[15:39:49] CMD> npm audit: 
+[15:39:49] CMD> npm audit: 
+[15:39:49] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[15:39:49] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Package       │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ Path          │ handlebars                                                   │
+[15:39:49] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:39:49] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[15:39:49] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[15:39:49] CMD> npm audit: 
+[15:39:49] CMD> npm audit: 
+[15:39:49] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[15:39:49] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[15:39:49] CMD> npm audit: 
+[15:39:49] CMD: Command "npm audit" has completed with an error
+[15:39:49] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[15:39:49] Running browserify against npm dependencies with a compatible main entrypoint
+[15:39:51] Finished 'assetsInstall' after 7.63 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[16:46:15] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[16:46:15] Starting 'assetsInstall'...
+[16:46:15] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[16:46:15] Installing vendor assets with NPM...
+[16:46:15] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[16:46:15] Dependency collation complete.
+[16:46:15] Using npm from PATH variable
+[16:46:15] Removing extraneous dependencies
+[16:46:15] CMD: Running command "npm prune"
+[16:46:17] CMD> npm prune: audited 49 packages in 0.692s
+[16:46:17] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[16:46:17] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:46:17] CMD> npm prune: 
+[16:46:17] CMD: Command "npm prune" has completed successfully
+[16:46:17] Installing dependencies
+[16:46:17] CMD: Running command "npm install"
+[16:46:19] CMD> npm install: audited 49 packages in 1.24s
+[16:46:19] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[16:46:19] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[16:46:19] CMD> npm install: 
+[16:46:19] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[16:46:19] CMD> npm install: 
+[16:46:19] CMD: Command "npm install" has completed successfully
+[16:46:19] Running audit
+[16:46:19] CMD: Running command "npm audit"
+[16:46:20] CMD> npm audit:                                                                                 
+[16:46:20] CMD> npm audit:                        === npm audit security report ===                        
+[16:46:20] CMD> npm audit:                                                                                 
+[16:46:20] CMD> npm audit: # Run  npm install handlebars@4.2.0  to resolve 2 vulnerabilities
+[16:46:20] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[16:46:20] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:46:20] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[16:46:20] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:46:20] CMD> npm audit: 
+[16:46:20] CMD> npm audit: 
+[16:46:20] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[16:46:20] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Package       │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ Path          │ handlebars                                                   │
+[16:46:20] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[16:46:20] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[16:46:20] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[16:46:20] CMD> npm audit: 
+[16:46:20] CMD> npm audit: 
+[16:46:20] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[16:46:20] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[16:46:20] CMD> npm audit: 
+[16:46:20] CMD: Command "npm audit" has completed with an error
+[16:46:20] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[16:46:20] Running browserify against npm dependencies with a compatible main entrypoint
+[16:46:22] Finished 'assetsInstall' after 6.62 s
+
+
+/usr/local/bin/node /var/www/html/userfrosting/build/node_modules/.bin/gulp assetsInstall
+
+[15:16:27] Using gulpfile /var/www/html/userfrosting/build/gulpfile.esm.js
+[15:16:27] Starting 'assetsInstall'...
+[15:16:27] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[15:16:27] Installing vendor assets with NPM...
+[15:16:27] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to '/var/www/html/userfrosting/app/assets/package.json'
+All done!
+[15:16:28] Dependency collation complete.
+[15:16:28] Using npm from PATH variable
+[15:16:28] Removing extraneous dependencies
+[15:16:28] CMD: Running command "npm prune"
+[15:16:30] CMD> npm prune: audited 49 packages in 0.893s
+[15:16:30] CMD> npm prune: found 2 vulnerabilities (1 high, 1 critical)
+[15:16:30] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[15:16:30] CMD> npm prune: 
+[15:16:30] CMD: Command "npm prune" has completed successfully
+[15:16:30] Installing dependencies
+[15:16:30] CMD: Running command "npm install"
+[15:16:31] CMD> npm install: audited 49 packages in 0.905s
+[15:16:31] CMD> npm install: found 2 vulnerabilities (1 high, 1 critical)
+[15:16:31] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[15:16:31] CMD> npm install: 
+[15:16:31] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[15:16:31] CMD> npm install: 
+[15:16:31] CMD: Command "npm install" has completed successfully
+[15:16:31] Running audit
+[15:16:31] CMD: Running command "npm audit"
+[15:16:33] CMD> npm audit:                                                                                 
+[15:16:33] CMD> npm audit:                        === npm audit security report ===                        
+[15:16:33] CMD> npm audit:                                                                                 
+[15:16:33] CMD> npm audit: # Run  npm install handlebars@4.3.0  to resolve 2 vulnerabilities
+[15:16:33] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[15:16:33] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[15:16:33] CMD> npm audit: │ High          │ Cross-Site Scripting                                         │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Package       │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Path          │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/61                              │
+[15:16:33] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[15:16:33] CMD> npm audit: 
+[15:16:33] CMD> npm audit: 
+[15:16:33] CMD> npm audit: ┌───────────────┬──────────────────────────────────────────────────────────────┐
+[15:16:33] CMD> npm audit: │ Critical      │ Prototype Pollution                                          │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Package       │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Dependency of │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ Path          │ handlebars                                                   │
+[15:16:33] CMD> npm audit: ├───────────────┼──────────────────────────────────────────────────────────────┤
+[15:16:33] CMD> npm audit: │ More info     │ https://npmjs.com/advisories/755                             │
+[15:16:33] CMD> npm audit: └───────────────┴──────────────────────────────────────────────────────────────┘
+[15:16:33] CMD> npm audit: 
+[15:16:33] CMD> npm audit: 
+[15:16:33] CMD> npm audit: found 2 vulnerabilities (1 high, 1 critical) in 49 scanned packages
+[15:16:33] CMD> npm audit:   2 vulnerabilities require semver-major dependency updates.
+[15:16:33] CMD> npm audit: 
+[15:16:33] CMD: Command "npm audit" has completed with an error
+[15:16:33] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[15:16:33] Running browserify against npm dependencies with a compatible main entrypoint
+[15:16:35] Finished 'assetsInstall' after 7.69 s
+
+
+C:\Program Files\nodejs\node.exe D:\xampp\htdocs\userfrosting\build\node_modules\gulp\bin\gulp.js assetsInstall
+
+[12:08:08] Using gulpfile D:\xampp\htdocs\userfrosting\build\gulpfile.esm.js
+[12:08:08] Starting 'assetsInstall'...
+[12:08:08] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[12:08:08] Installing vendor assets with NPM...
+[12:08:08] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to 'D:\xampp\htdocs\userfrosting\app\assets\package.json'
+All done!
+[12:08:08] Dependency collation complete.
+[12:08:08] Using npm from PATH variable
+[12:08:08] Removing extraneous dependencies
+[12:08:08] CMD: Running command "npm prune"
+[12:08:15] CMD> npm prune: audited 49 packages in 2.557s
+[12:08:15] CMD> npm prune: found 6 vulnerabilities (5 high, 1 critical)
+[12:08:15] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:08:15] CMD> npm prune: 
+[12:08:15] CMD: Command "npm prune" has completed successfully
+[12:08:15] Installing dependencies
+[12:08:15] CMD: Running command "npm install"
+[12:08:23] CMD> npm install: audited 49 packages in 2.836s
+[12:08:23] CMD> npm install: found 6 vulnerabilities (5 high, 1 critical)
+[12:08:23] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[12:08:23] CMD> npm install: 
+[12:08:23] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[12:08:23] CMD> npm install: 
+[12:08:23] CMD: Command "npm install" has completed successfully
+[12:08:23] Running audit
+[12:08:23] CMD: Running command "npm audit"
+[12:08:50] CMD> npm audit: npm ERR! code ETIMEDOUT
+[12:08:50] CMD> npm audit: npm ERR! errno ETIMEDOUT
+[12:08:50] CMD> npm audit: npm ERR! network request to https://registry.npmjs.org/-/npm/v1/security/audits failed, reason: connect ETIMEDOUT 104.16.16.35:443
+[12:08:50] CMD> npm audit: npm ERR! network This is a problem related to network connectivity.
+[12:08:50] CMD> npm audit: npm ERR! network In most cases you are behind a proxy or have bad network settings.
+[12:08:50] CMD> npm audit: npm ERR! network 
+[12:08:50] CMD> npm audit: npm ERR! network If you are behind a proxy, please make sure that the
+[12:08:50] CMD> npm audit: npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+[12:08:50] CMD> npm audit: 
+[12:08:50] CMD> npm audit: npm ERR! A complete log of this run can be found in:
+[12:08:50] CMD> npm audit: npm ERR!     C:\Users\Imama\AppData\Roaming\npm-cache\_logs\2019-11-29T11_08_50_201Z-debug.log
+[12:08:50] CMD> npm audit: 
+[12:08:50] CMD: Command "npm audit" has completed with an error
+[12:08:50] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[12:08:50] Running browserify against npm dependencies with a compatible main entrypoint
+[12:08:59] Finished 'assetsInstall' after 51 s
+
+
+C:\Program Files\nodejs\node.exe D:\xampp\htdocs\userfrosting\build\node_modules\gulp\bin\gulp.js assetsInstall
+
+[14:58:21] Using gulpfile D:\xampp\htdocs\userfrosting\build\gulpfile.esm.js
+[14:58:21] Starting 'assetsInstall'...
+[14:58:21] Legacy frontend vendor assets were deleted. Frontend vendor assets are now installed to 'app/assets'.
+[14:58:21] Installing vendor assets with NPM...
+[14:58:21] Collating dependencies...
+Inspecting template package...
+Package is VALID.
+Inspecting package at ../app/sprinkles/core/package.json
+Package is VALID.
+Starting dependency merge.
+Starting merge of dependencies from package 'undefined'
+Merging dependency type 'dependencies'
+Adding dependency 'bootstrap' with '^3.3.6'.
+Adding dependency 'clipboard' with '^1.5.16'.
+Adding dependency 'font-awesome' with '^4.7.0'.
+Adding dependency 'handlebars' with '^3.0.3'.
+Adding dependency 'jquery' with '^3.2.1'.
+Adding dependency 'jquery-ui' with '^1.12.0'.
+Adding dependency 'jquery-validation' with '~1.14.0'.
+Adding dependency 'select2' with '^4.0.5'.
+Adding dependency 'tablesorter' with '^2.28.5'.
+Adding dependency 'moment' with '^2.17.1'.
+Adding dependency 'speakingurl' with '^11.0.0'.
+Adding dependency 'icheck' with '^1.0.1'.
+Adding dependency 'jquery-slimscroll' with '~1.3.8'.
+Adding dependency 'fastclick' with '^1.0.6'.
+Adding dependency 'ionicons' with '^2.0.1'.
+Adding dependency 'urijs' with '^1.18.4'.
+Finished merge of dependencies from package 'undefined'
+Finished dependency merge.
+Saving generated package to 'D:\xampp\htdocs\userfrosting\app\assets\package.json'
+All done!
+[14:58:22] Dependency collation complete.
+[14:58:22] Using npm from PATH variable
+[14:58:22] Removing extraneous dependencies
+[14:58:22] CMD: Running command "npm prune"
+[14:58:32] CMD> npm prune: audited 49 packages in 3.991s
+[14:58:32] CMD> npm prune: found 6 vulnerabilities (5 high, 1 critical)
+[14:58:32] CMD> npm prune:   run `npm audit fix` to fix them, or `npm audit` for details
+[14:58:32] CMD> npm prune: 
+[14:58:32] CMD: Command "npm prune" has completed successfully
+[14:58:32] Installing dependencies
+[14:58:32] CMD: Running command "npm install"
+[14:58:42] CMD> npm install: audited 49 packages in 2.895s
+[14:58:42] CMD> npm install: found 6 vulnerabilities (5 high, 1 critical)
+[14:58:42] CMD> npm install:   run `npm audit fix` to fix them, or `npm audit` for details
+[14:58:42] CMD> npm install: 
+[14:58:42] CMD> npm install: npm notice created a lockfile as package-lock.json. You should commit this file.
+[14:58:42] CMD> npm install: 
+[14:58:42] CMD: Command "npm install" has completed successfully
+[14:58:42] Running audit
+[14:58:42] CMD: Running command "npm audit"
+[14:58:49] CMD> npm audit: === npm audit security report ===                        
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: # Run  npm install handlebars@4.5.3  to resolve 6 vulnerabilities
+[14:58:49] CMD> npm audit: SEMVER WARNING: Recommended action is a potentially breaking change
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   High            Cross-Site Scripting                                          
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/61                         
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Critical        Prototype Pollution                                           
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/755                        
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   High            Prototype Pollution                                           
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/1164                       
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   High            Arbitrary Code Execution                                      
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/1316                       
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   High            Arbitrary Code Execution                                      
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/1324                       
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   High            Prototype Pollution                                           
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Package         handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Dependency of   handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   Path            handlebars                                                    
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit:   More info       https://nodesecurity.io/advisories/1325                       
+[14:58:49] CMD> npm audit:                                                                                 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD> npm audit: found 6 vulnerabilities (5 high, 1 critical) in 49 scanned packages
+[14:58:49] CMD> npm audit:   6 vulnerabilities require semver-major dependency updates.
+[14:58:49] CMD> npm audit: 
+[14:58:49] CMD: Command "npm audit" has completed with an error
+[14:58:49] There appear to be some vulerabilities within your dependencies. Updating is recommended.
+[14:58:49] Running browserify against npm dependencies with a compatible main entrypoint
+[14:58:59] Finished 'assetsInstall' after 38 s

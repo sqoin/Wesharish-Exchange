@@ -1,0 +1,171 @@
+{% extends "pages/abstract/base.html.twig" %}
+
+{# Overrides blocks in head of base template #}
+{% block page_title %}{{translate('SIGNIN')}}{% endblock %}
+
+{% block page_description %}{{translate('PAGE.LOGIN.DESCRIPTION', {'site_name': site.title })}}{% endblock %}
+
+{% block body_attributes %}
+    class="hold-transition login-page"
+    style="position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg);
+    background-size: cover;"
+{% endblock %}
+
+{% block content %}
+<div class="login-box">
+    {% block loginLogo %}
+    <div class="login-logo">
+
+        <div><img src="/assets-raw/userfrosting/images/logo.png"></div>
+
+        <a href="{{site.uri.public}}" style="    color: white;
+    font-weight: 400;">{{site.title}}</a>
+    </div>
+    <!-- /.login-logo -->
+    {% endblock %}
+
+    {% block loginBox %}
+    <div class="login-box-body login-form"  style="    background: white;
+    border: solid #f1f1f1;border-radius:7px">
+        <p class="login-box-msg"><strong style="font-size: 20px;">{{translate('SIGNIN')}}</strong></p>
+
+        <div class="form-alerts" id="alerts-page"></div>
+
+
+        <div class="row" style="margin-bottom:30px">
+
+        <div class="col-sm-4 col-xs-12" style="padding-right: 10px;padding-left: 10px;margin-bottom: 10px;">
+          <div>
+          <a href="{{site.uri.public}}/oauth/facebook/login" class="btn" style="background-color: #3B5998;color: white;width: 100%;padding-left: 0;
+    padding-right: 0;font-size: 13px">
+                  <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12" style="padding-right: 10px;padding-left: 10px;margin-bottom: 10px;">
+          <div>
+            <a href="{{site.uri.public}}/oauth/linkedin/login" class="btn" style="background-color: #55ACEE;color: white;width: 100%;padding-left: 0; padding-right: 0;font-size: 13px">
+          <i class="fa fa-twitter fa-fw"></i> Login with Linkedin
+        </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12" style="padding-right: 10px;padding-left: 10px;margin-bottom: 10px;">
+        <div>
+        <a href="#" class="btn" style="background-color: #dd4b39;color: white;    width: 100%;
+    padding-left: 0;
+    padding-right: 0;font-size: 13px">
+        <i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+        </div>
+        </div>
+
+      </div>
+
+
+  {% block loginForm %}
+        <form action="{{site.uri.public}}/account/login" id="sign-in"  method="post">
+          {% include "forms/csrf.html.twig" %}
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="{% if site.login.enable_email %}{{translate('EMAIL_OR_USERNAME')}}{% else %}{{translate('USERNAME')}}{% endif %}"
+             name="user_name" id="userName">
+            <i class="glyphicon glyphicon-user form-control-icon" aria-hidden="true"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="{{translate('PASSWORD')}}" name="password" id = "password">
+            <i class="glyphicon glyphicon-lock form-control-icon" aria-hidden="true"></i>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                <label>
+                  <input type="checkbox" class="js-icheck" name="rememberme"> {{translate('REMEMBER_ME')}}
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+  
+            <div class="col-xs-4">
+            
+            
+              <button type="submit" class="btn btn-primary btn-block btn-flat">
+   {% if checkAccess('uri_users') and  checkAccess('role.users.count') %}
+
+              <script>
+               function redirectOnLogin(jqXHR) {
+
+alert("houniiii");
+var str = localStorage.getItem('ActuelPageURL');
+var position = str.indexOf("amount");
+
+if (position !== -1){
+ console.log('true');
+
+  window.location.href=str ;
+}
+else{
+                 //var thePath="http://localhost:62";
+                 var thePath="https://sqoin.exchange";
+                 location.replace(thePath+"/walletd")
+
+               }
+}
+              </script>
+              {% endif %}
+
+
+{{translate('LOGIN')}}</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+        {% endblock %}
+
+        {% block loginLinks %}
+        <a href="{{site.uri.public}}/account/forgot-password">{{translate('PASSWORD.FORGET')}}</a><br>
+        {% if site.registration.require_email_verification %}
+            <a href="{{site.uri.public}}/account/resend-verification">{{translate('ACCOUNT.VERIFICATION.RESEND')}}</a><br>
+        {% endif %}
+        {% if site.registration.enabled %}
+            <a href="{{site.uri.public}}/account/register">{{translate('REGISTER')}}</a>
+        {% endif %}
+        {% endblock %}
+
+    </div>
+    {% endblock %}
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+{% endblock %}
+
+{% block scripts_page %}
+    <!-- Include validation rules -->
+    <script>
+        {% include "pages/partials/page.js.twig" %}
+    </script>
+
+    <script>
+    
+    site = $.extend(
+        true,               // deep extend
+        {
+            "registration" : {
+                "enabled" : "{{site.registration.enabled}}"
+            }
+        },
+        site
+    );
+    </script>
+           
+
+  
+
+
+    <!-- Include page-specific JS -->
+       {{ assets.js('js/pages/sign-in') | raw }}
+{% endblock %}

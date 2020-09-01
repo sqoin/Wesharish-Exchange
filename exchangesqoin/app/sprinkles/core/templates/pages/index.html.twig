@@ -1,0 +1,174 @@
+{% extends "pages/abstract/default.html.twig" %}
+
+{% set page_active = "home" %}
+
+{# Overrides blocks in head of base template #}
+{% block page_title %}{{translate("HOME")}}{% endblock %}
+
+{% block page_description %}{% endblock %}
+
+{% block body_matter %}
+    <!-- full width image -->
+    <div class="container-fluid" style="    height: 60vh;
+    text-align: center;
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg);
+    color: white;
+    position: relative;background-size: cover;
+    background-attachment: fixed;">
+
+        <div id="main-blockS" style="font-family: 'Roboto', sans-serif;
+
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);width: 100%;">
+        <h1 style="font-family: 'Roboto', sans-serif;
+    font-weight: 900;">
+            Buy, Sell &amp; Accept<br>Cryptocurrency<br>with Sqoin Payment Gateway
+            </h1>
+            <h2 style="font-weight: normal;">Your Gateway to Bitcoin &amp; Altcoin Payments</h2>
+            <div id="redM"  style="text-align: center">
+                 <button type="button" onClick="window.location.href='{{site.uri.public}}/account/register'" style="background-color: #f96e07 !important; color: white !important; border-radius: 10px; font-weight: 600; font-size: 0.8em; border-style: unset; outline: none; border: solid 2px #1e88f8; margin: 0 10px; padding: 14px 25px; text-align: center; text-decoration: none; display: inline-block;margin-top: 30px;">register now</button>
+		
+            
+                 <button type="button"onClick="window.location.href='" style="background-color: #f96e07 !important; color: white !important; border-radius: 10px; font-weight: 600; font-size: 0.8em; border-style: unset; outline: none; border: solid 2px #1e88f8; margin: 0 10px; padding: 14px 25px; text-align: center; text-decoration: none; display: inline-block;margin-top: 30px;">learn more</button>
+
+
+               <button type="button"onClick="window.location.href='http://demo.sqoin.exchange'" style="background-color: #f96e07 !important; color: white !important; border-radius: 10px; font-weight: 600; font-size: 0.8em; border-style: unset; outline: none; border: solid 2px #1e88f8; margin: 0 10px; padding: 14px 25px; text-align: center; text-decoration: none; display: inline-block;margin-top: 30px;">demo website</button>
+
+           </div>
+            </div>
+        <!--<img src="https://d1mjtvp3d1g20r.cloudfront.net/2019/01/28153827/Featured-Image-Monero-Prune-e1548689979384-1024x681.jpg" style="width: 100%;
+    height: 100%;
+    object-fit: cover;">-->
+    </div>
+    <!-- end full width image -->
+    <!-- Header Carousel -->
+    <!--<div class="box box-solid"style="background: transparent;box-shadow: unset;">
+        <div class="box-body"style="text-align: center;">
+              
+ <img src="/assets-raw/userfrosting/images/output.png" style="width: 50%;">
+                
+        </div>
+    </div>
+        <div class="col-lg-12"style="width:100%;color:#000000;font-size:24px;display: inline-block; text-align: center">
+            <h1>
+            Buy, Sell &amp; Accept<br>Cryptocurrency<br>with <b> Sqoin Payment Gateway</b>
+            </h1>
+            <h2>Your Gateway to Bitcoin &amp; Altcoin Payments</h2>
+            
+        </div>
+             <div id="redM"  style="text-align: center;">
+                 <button type="button" onClick="window.location.href='{{site.uri.public}}/account/register'" style="margin: 0 10px;;border-radius: 10px;border-style: unset; border: solid 2px gray;background-color:#f7f7f7;color:#000000;padding:14px 25px; text-align:center;text-decoration:none;display:inline-block">register now</button>
+		
+            
+                 <button type="button"onClick="window.location.href='" style="border-radius: 10px; border-style: unset;border: solid 2px gray;background-color:#f7f7f7;color:#000000;margin: 0 10px;;padding:14px 25px; text-align:center;text-decoration:none;display:inline-block;">learn more</button>
+
+
+               <button type="button"onClick="window.location.href='http://demo.sqoin.exchange'" style="border-radius: 10px; border-style: unset;border: solid 2px gray;background-color:#f7f7f7;color:#000000;margin: 0 10px;;padding:14px 25px; text-align:center;text-decoration:none;display:inline-block;">demo website</button>
+
+           </div> -->
+          <div class="row blockS" style="padding: 130px;background:white">
+<div class="col-md-4" style="height:298px;margin-bottom: 20px;">
+
+<div class="text-center" style="background: #64ab23; color: #fff4f4; border-radius: 10px; padding: 10px 0; height: 100%;">
+<h2>Buy and Sell Cryptocurrencies</h2>
+<img alt="Buy Cryptocurrencies" src="http://www.pngmart.com/files/7/Payment-PNG-Background-Image.png" width="100">
+<h3>Explore payment options </h3></div>
+
+</div>
+<div class="col-md-4" style="height:298px;;margin-bottom: 20px;">
+
+<div class="text-center" style="background: #64ab23; color: #fff4f4; border-radius: 10px; padding: 10px 0; height: 100%;">
+<h2>Accept Bitcoin Payments &amp; Altcoins</h2>
+<img alt="Accept Bitcoin Payments &amp; Altcoins" src="http://www.pngmart.com/files/7/Payment-PNG-Transparent.png" width="100">
+<h3>Learn how our payment gateway works </h3>
+</div>
+
+</div>
+<div class="col-md-4" style="height:298px;margin-bottom: 20px;">
+
+
+<div class="text-center" style="background: #64ab23; color: #fff4f4; border-radius: 10px; padding: 10px 10px; height: 100%;">
+<h2>Create Your Own Currency</h2>
+<img alt="Create Your Own Currency &amp; Altcoins" src="/assets-raw/userfrosting/images/adaptrable01.png "style="width:128px;height:128px">
+
+<h3>Create and Share Currency in Few Minutes</h3>
+</div>
+
+</div>
+</div>
+<div class="section-wrapper-alt" style="
+    background: #2d3c4d;
+    border-radius: 10px;
+">
+
+<div class="container" style="padding-bottom: 30px;padding-top: 30px;">
+
+<div class="section section-altcoins" style="color: white;">
+<div class="text-center">
+<h2>Accept Bitcoin and Over 50 Altcoins</h2>
+<h4>Receive payouts in Euros, U.S. Dollars or Bitcoin</h4>
+<div class="row">
+<div class="col-xs-4">
+
+<img alt="Accept Ethereum" src="/assets-raw/userfrosting/images/bastoji.png" style="width:100px;height:100px">
+<h5>Bastoji</h5>
+</div>
+<div class="col-xs-4">
+<img alt="Accept XRP" src="https://static.coingate.com/images/currencies/256x256/xrp-edited.png"style="width:100px;height:100px">
+<h5>XRP</h5>
+
+</div>
+<div class="col-xs-4">
+
+<img alt="Accept Bitcoin" src="/assets-raw/userfrosting/images/money-bitcoin-512.png" style="width:100px;height:100px">
+
+<h5>Bitcoin</h5>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6">
+
+<img alt="Accept Litecoin" src="/assets-raw/userfrosting/images/imageslitecoin.png" style="width:100px;height:100px">
+
+<h5>Litecoin</h5>
+
+</div>
+<div class="col-xs-6">
+
+<img alt="Accept Altcoins" src="/assets-raw/userfrosting/images/bitcointrans.png" style="width:100px;height:100px">
+<h5>50+ Altcoins</h5>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            
+{% endblock %}
+
+{% block scripts_page %}
+<script>
+			var idStrorage = localStorage.getItem('id');
+
+			console.log("msggggg"+idStrorage);
+			if(idStrorage >0){
+console.log("hello"+idStrorage);
+			$('#redM').css("text-align","center");
+			$('#redM').append('<a style="background-color:#8d4362;color:white;padding:14px 25px; text-align:center;text-decoration:none;display:inline-block" href="/dashboard">Go to Dashboard</a>');
+												} 
+	</script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: false // set to false to prevent auto-advance
+    })
+    </script>
+{% endblock %}

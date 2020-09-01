@@ -1,0 +1,66 @@
+{
+  "name": "vue-paper-dashboard-pro",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A premium Vue.js admin dashboard for bootstrap. Coded by BinarCode, designed by Creative Tim.",
+  "author": "cristi.jora <joracristi@gmail.com>",
+  "scripts": {
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve --open"
+  },
+  "dependencies": {
+    "@sweetalert2/theme-minimal": "^2.2.1",
+    "browserslist": "^4.7.1",
+    "caniuse-lite": "^1.0.30001002",
+    "chart.js": "^2.7.2",
+    "d3": "^5.7.0",
+    "datamaps": "^0.5.9",
+    "element-theme-chalk": "^2.12.0",
+    "fullcalendar": "^4.0.0-alpha.3",
+    "google-maps": "^3.2.1",
+    "nprogress": "^0.2.0",
+    "perfect-scrollbar": "0.7.1",
+    "qrcode.vue": "^1.6.3",
+    "register-service-worker": "^1.5.2",
+    "topojson": "^3.0.2",
+    "vee-validate": "^2.1.7",
+    "vue": "^2.6.6",
+    "vue-chartjs": "^3.3.2",
+    "vue-clickaway": "^2.2.2",
+    "vue-clipboard2": "^0.3.1",
+    "vue-json-csv": "^1.2.9",
+    "vue-router": "^3.0.2",
+    "vue-router-prefetch": "^1.6.0",
+    "vue-stripe-checkout": "^3.0.0-beta.11",
+    "vue-stripe-elements-plus": "^0.3.2",
+    "vue-toasted": "^1.1.27",
+    "vue2-transitions": "^0.2.3",
+    "yarn-install": "^1.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-pwa": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "axios": "^0.19.0",
+    "babel-plugin-component": "^1.1.1",
+    "css-loader": "^3.2.0",
+    "element-ui": "^2.12.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "sweetalert2": "^8.18.5",
+    "vue-cli-plugin-axios": "^0.0.4",
+    "vue-cli-plugin-moment": "^0.1.1",
+    "vue-template-compiler": "^2.6.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.0.0"
+  }
+}

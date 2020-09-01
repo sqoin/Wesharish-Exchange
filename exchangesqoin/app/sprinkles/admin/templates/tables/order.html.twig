@@ -1,0 +1,86 @@
+{% extends "tables/table-paginated.html.twig" %}
+
+{% block table %}
+           <table id="{{table.id}}" class="tablesorter table table-bordered table-hover table-striped" data-sortlist="{{table.sortlist}}">
+           <thead> 
+            <tr>
+            <th class="sorter-metatext" data-column-name="id" data-column-template="#payments-table-column-id" data-priority="1">{{translate("USER")}}</th>
+                <th class="sorter-metatext" data-column-name="currency" data-column-template="#payments-table-column-currency" data-priority="1">{{translate("CURRENCY")}} </th>
+                <th class="sorter-metanum" data-column-name="amount" data-column-template="#payments-table-column-amount" data-priority="1">{{translate("AMOUNT")}} </th>
+                <th class="sorter-metatext" data-column-name="processed" data-column-template="#payments-table-column-processed" data-priority="1">{{translate("PROCESSED ")}} </th>
+                <th class="sorter-metatext" data-column-name="transactions_id" data-column-template="#payments-table-column-transactions_id" data-priority="1">{{translate("TRANSACTION ID")}} </th>
+                <th class="sorter-metatext" data-column-name="date" data-column-template="#payments-table-column-date" data-priority="1">{{translate("DATE ")}} </th>           
+                <th   class="sorter-metatext" data-column-name="eventid" data-column-template="#payments-table-column-eventid" data-priority="1">{{translate("EVENTID ")}}</th>                 
+            </tr>
+            </thead>
+        <tbody>
+        </tbody>
+    </table>
+{% endblock %}
+{% block table_cell_templates %}
+{% verbatim %}
+    <script id="payments-table-column-id" type="text/x-handlebars-template">
+        <td data-text="{{row.user.last_name}}">
+            {{#if row.user }}
+                <strong>
+                    <a href="http://explorer.sqoin.us/#/address/{{row.address}}">{{row.user.first_name}} {{row.user.last_name}} ({{row.user.user_name}})</a>
+                </strong>
+                <div class="js-copy-container">
+                    <span class="js-copy-target">{{row.user.email}}</span>
+                    <button class="btn btn-xs uf-copy-trigger js-copy-trigger"><i class="fa fa-copy"></i></button>
+                </div>
+                {{ else }}
+                <i>{% endverbatim %}{{translate("USER.DELETED")}}{% verbatim %}</i>
+            {{/if }}
+
+        </td>
+</script>
+<script id="payments-table-column-currency" type="text/x-handlebars-template">
+        <td>
+            <div>
+                {{row.currency}}
+            </div>
+        </td>
+    </script>
+<script id="payments-table-column-amount" type="text/x-handlebars-template">
+        <td>
+            <div>
+               {{row.amount}}
+            </div>
+        </td>
+    </script>
+<script id="payments-table-column-processed" type="text/x-handlebars-template">
+        <td>
+            <div>
+               {{row.processed}}
+            </div>
+        </td>
+    </script>
+
+<script id="payments-table-column-transactions_id" type="text/x-handlebars-template">
+        <td>
+            <div>
+	<a href="http://explorer.sqoin.us/#/tx/{{row.transactions_id}}">view transaction</a>
+            </div>
+        </td>
+    </script>
+
+
+<script id="payments-table-column-date" type="text/x-handlebars-template">
+
+        <td>
+         <div>
+            {{ row.date}}
+          </div>
+        </td>
+    </script>
+
+<script id="payments-table-column-eventid" type="text/x-handlebars-template">
+        <td>
+            <div>
+              <a href="https://stripe.sagecity.io/{{row.eventid}}">{{row.eventid}}</a>
+            </div>
+        </td>
+    </script>
+{% endverbatim %}
+{% endblock %}
