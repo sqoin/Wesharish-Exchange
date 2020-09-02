@@ -10,11 +10,11 @@
       <div class="navbar-toggle">
         <navbar-toggle-button @click.native="toggleSidebar"></navbar-toggle-button>
       </div>
-      <a class="navbar-brand">Wallet Pro</a>
+     <!-- <a class="navbar-brand">Wallet Pro</a>
       <el-link :underline="false">
         Standard Account
         <i class="el-icon-star-off"></i>
-      </el-link>
+      </el-link>-->
     </div>
     <template slot="navbar-menu">
       <ul class="navbar-nav">
