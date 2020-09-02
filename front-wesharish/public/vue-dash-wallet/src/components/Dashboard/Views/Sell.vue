@@ -38,6 +38,7 @@
                 show-word-limit
               ></el-input>
             </fg-input>
+            
           </div>
           <p-button type="warning" :disabled="isDisabled" round outline @click="onSubmit">Redeem</p-button>
         </card>
