@@ -4,7 +4,7 @@ function resolveSrc(_path) {
   return path.join(__dirname, _path);
 }
 module.exports = {
-baseUrl: '/vue-dash-wallet/dist/',
+baseUrl: '/',
   configureWebpack: {
     // Set up all the aliases we use in our app.
     resolve: {

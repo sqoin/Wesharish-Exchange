@@ -11,7 +11,7 @@
           <img :src="logo" alt>
         </div>
       </a>
-      <!-- <a class="simple-text logo-normal" href="https://sqoin.us">{{ title }}</a> -->
+      <!-- <a class="simple-text logo-normal" href="http://weshareish.com">{{ title }}</a> -->
     </div>
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <slot></slot>
@@ -65,7 +65,7 @@ export default {
     },
     logo: {
       type: String,
-      default: "/vue-dash-wallet/dist/static/img/Logo-white.svg",
+      default: "/static/img/Logo-white.svg",
       description: "Sidebar Logo"
     },
     sidebarLinks: {

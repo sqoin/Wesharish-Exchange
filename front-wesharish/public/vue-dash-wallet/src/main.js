@@ -48,7 +48,7 @@ Vue.prototype.$http = Axios;
 
 //Vue.prototype.$myUrl = "https://sqoin.exchange";
 
-Vue.prototype.$myUrl = "http://localhost:3014";
+Vue.prototype.$myUrl = "http://18.218.152.243";
 //Vue.prototype.$myUrll="http://localhost:8082/vue-dash-wallet/dist/";
 //"https://sqoin.exchange";
 //Vue.prototype.$currentUser ;

@@ -162,7 +162,7 @@ var form = {
 var formData = querystring.stringify(form);
 var contentLength = formData.length;
 var token;
-var url ='http://localhost:3014';
+var url ='/';
 //var url ='http://localhost:3016';
 
 function send_callback(err, res, body) {
