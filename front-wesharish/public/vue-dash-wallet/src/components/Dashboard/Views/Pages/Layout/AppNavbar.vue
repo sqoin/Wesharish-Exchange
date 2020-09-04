@@ -1,7 +1,7 @@
 <template>
   <navbar navbar-menu-classes="navbar-right" v-model="showMenu">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="">SQoin Wallet Pro</a>
+      <a class="navbar-brand" href="">Wesharish Wallet Pro</a>
     </div>
     <template slot="navbar-menu"></template>
   </navbar>
