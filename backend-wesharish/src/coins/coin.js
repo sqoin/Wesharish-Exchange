@@ -29,6 +29,48 @@ _publics.tokens;
 _publics.generatePrivateKey = (req, res) => {
     return generatePrivateKey(req, res);
 }
+
+
+
+_publics.generatePrivateKeyAndPublicKey = (req, res) => {
+    return generatePrivateKeyAndPublicKey(req, res);
+}
+
+
+
+
+
+function generatePrivateKeyAndPublicKey(req, res) {
+    logger.info("here is generate keys!");
+    var privateKeyGenerator;
+    var storage;
+    _publics.requestUtils.getRawBody(req)
+    .then(body => {
+    var object = JSON.parse(body);
+    res.payload.userId = object.userId;
+    res.payload.coin = object.coin;
+    res.payload.pin = object.pin;
+    storage =target+'target'+res.payload.coin;
+    var localisation =require('./'+res.payload.coin+'/controller');
+    privateKeyGenerator=localisation.privateKeyGenerator;  
+        
+    _publics.fileUtil.isFolderExist(res, storage + "/" + res.payload.userId)
+    .then((path) => _publics.fileUtil.generateFolder(storage, res.payload.userId)
+                .then(response =>privateKeyGenerator()
+                    .then((data) =>_publics.cryptoUtil.encryptAndSave(res.payload.pin, data.privateKey, storage + "/" + res.payload.userId + "/" + namePrivate)
+                                .then(() =>_publics.user.savePublicKeyToDatabase(res.payload.userId, res.payload.coin, data.publicKey)
+                                            .then((resultat) => res.send({"publicKey":data.publicKey  ,  "privateKey": data.privateKey})
+                                                )
+                                    )
+                    )
+                )
+        )
+    })
+    
+}
+
+
+
 //get private key from file and create it if it doesn't exist 
 function generatePrivateKey(req, res) {
     logger.info("here is generate keys!");
