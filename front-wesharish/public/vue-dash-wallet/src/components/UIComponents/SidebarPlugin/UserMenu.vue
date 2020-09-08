@@ -20,7 +20,7 @@
                 <span class="sidebar-normal">My Profile</span>
               </router-link>
             </li>
-            <li>
+            <!--<li>
               <router-link to="/editmyprofile">
                 <span class="sidebar-mini-icon">Ep</span>
                 <span class="sidebar-normal">Edit Profile</span>
@@ -31,7 +31,7 @@
                 <span class="sidebar-mini-icon">S</span>
                 <span class="sidebar-normal">Settings</span>
               </router-link>
-            </li>
+            </li>-->
           </ul>
         </collapse-transition>
       </div>

@@ -18,7 +18,7 @@
     </div>
     <template slot="navbar-menu">
       <ul class="navbar-nav">
-        <drop-down tag="li" position="right" direction="none" class="nav-item btn-rotate dropdown">
+        <!--<drop-down tag="li" position="right" direction="none" class="nav-item btn-rotate dropdown">
           <a
             slot="title"
             slot-scope="{isOpen}"
@@ -39,8 +39,9 @@
             <img src="static/img/flags/SA.png">&nbsp;عربي
           </a>
         </drop-down>
+        -->
 
-        <drop-down
+        <!--<drop-down
           icon="nc-icon nc-bell-55"
           tag="li"
           position="right"
@@ -66,7 +67,7 @@
               href="#"
             >{{transaction.userfromname}} {{transaction.usertoname}} {{transaction.amount}} {{transaction.state}}</a>
           </div>
-        </drop-down>
+        </drop-down>-->
         <drop-down
           icon="nc-icon nc-single-02"
           tag="li"
