@@ -1,5 +1,4 @@
 
-
 const config = require('../../config');
 var jwt    = require('jsonwebtoken');
 const express = require('express');
@@ -200,12 +199,6 @@ userUtil.updateUserRouter(req)
 router.post('/api/generatePrivateKey', (req, res, next) =>{  
 coin.generatePrivateKey (req,res)
 });
-
-
-//get private key and create it if it does not exist
-router.post('/api/generatePrivateKeyAndPublicKey', (req, res, next) =>{  
-  coin.generatePrivateKey (req,res)
-  });
 
 
 
