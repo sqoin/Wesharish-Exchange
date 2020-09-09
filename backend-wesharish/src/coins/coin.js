@@ -51,6 +51,7 @@ function generatePrivateKeyAndPublicKey(req, res) {
     res.payload.coin = object.coin;
     res.payload.pin = object.pin;
     storage =target+'target'+res.payload.coin;
+    
     var localisation =require('./'+res.payload.coin+'/controller');
     privateKeyGenerator=localisation.privateKeyGenerator;  
         
