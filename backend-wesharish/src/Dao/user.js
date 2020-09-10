@@ -537,6 +537,41 @@ _publics.getCoinNameByIdUser=(idUser)=>{
 
 
 
+// Update data of the user 
+_publics.updateAdminDetails = (id, user) => {
+    var userObj=JSON.parse(user);
+  
+    var firstname = userObj.firstname;
+    var lastname = userObj.lastname;
+    var phone = userObj.phone;
+    var zip = userObj.zip;
+  
+  const update = ' UPDATE users SET first_name=$1,last_name=$2 , postcode =$5 ,  phone =$7  WHERE id = $8 '
+  const values = [firstname,lastname, zip ,  phone,id]
+  
+      return new Promise((resolve, reject) => {
+            pool.connect((err, connection, release) => {
+              if (err) {
+                  logger.error('error connecting to DB '+err);
+                return reject(err)
+              }
+              connection.query(update, values, function(err, result) {
+              release()
+              var msg = "";
+              if (err) {
+                  msg = "failure   :" +err;
+              } else {
+                  msg = "success";
+              }
+        
+              return resolve(msg);
+          });
+      });
+  })
+  }
+  
+
+
 _publics.login = (admin) => {
     return new Promise((resolve, reject) => {
   

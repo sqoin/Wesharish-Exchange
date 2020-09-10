@@ -337,5 +337,18 @@ requestUtils.getRawBody(req)
     res.send(response);
 })
 .catch(next));
+
+
+/* Update user */
+router.put('/api/updateAdminDetails', (req, res, next) => 
+requestUtils.getRawBody(req)
+.then(userDetails => { 
+return user.updateAdminDetails(req.query.id,userDetails)
+})
+.then(response=>res.send(response))
+
+.catch(next));
+
+
 module.exports = router;
 
