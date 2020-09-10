@@ -535,4 +535,97 @@ _publics.getCoinNameByIdUser=(idUser)=>{
 }) 
 }
 
+
+
+_publics.login = (admin) => {
+    return new Promise((resolve, reject) => {
+  
+         returnPassword(admin)
+         .then(result=>{
+             return  verifPassword(result.password,  result.rows)
+         })
+         .then(res=>{
+             return resolve(res)
+         })
+  
+  
+    })
+
+
+    function verifPassword( password , rows ){
+        return new Promise((resolve, reject) => {
+         
+               
+                var encrypted= rows.password;
+                var bcrypt = require('bcrypt');
+                var hash = encrypted.replace('$2y$', '$2a$');
+              
+                bcrypt.compare(password, hash,async function(err, correct) {
+                 console.log("correct -> " + correct);
+                 console.log("error -> " + err);
+                 if (correct === true){
+                    return resolve ({
+                      member:rows,
+                      status:200
+                    });
+                }
+                else{
+                    return resolve ({
+                      status: 403
+                    });
+                }
+                });
+               
+                
+          
+        
+      })
+      }
+  
+//admin login
+function returnPassword  (admin) {
+
+    var userDetails = {};
+    var admin0 = JSON.parse(admin);
+    var email = admin0.email;
+    var password = admin0.password;
+    console.log("email "+email)
+    return new Promise((resolve, reject) => {
+  
+      var sql = "select * from users where email=$1";
+      pool.connect(function(err, connection, release){ 
+        if (err) {  
+        reject(err);
+        }
+        connection.query(sql, [email], function (err, result) {
+        release();
+        console.log("result "+result.rows)
+  
+  
+        if (err) {
+          return resolve(
+            {
+             status: 500
+           });
+  
+        } else if (result.rows[0] === undefined) {
+          return resolve(
+           {
+            status: 403
+          });
+        }
+        else{
+          return resolve( {"rows":result.rows[0], "password":password});
+        }
+       
+      });
+    });
+    });
+  }
+
+  
+
+
+
+
 module.exports = _publics;

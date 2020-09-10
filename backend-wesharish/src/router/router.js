@@ -326,5 +326,16 @@ router.get('/api/verifiedKeys', (req, res, next) =>{
     res.send(response)})
   .catch(next);
 })
+
+
+router.post('/login', (req, res, next) =>
+getRawBody(req)
+.then(admin => {
+    return user.login(admin);
+})
+.then(response => {
+    res.send(response);
+})
+.catch(next));
 module.exports = router;
 
