@@ -551,7 +551,7 @@ _publics.login = (admin) => {
   
     })
 
-
+}
     function verifPassword( password , rows ){
         return new Promise((resolve, reject) => {
          
