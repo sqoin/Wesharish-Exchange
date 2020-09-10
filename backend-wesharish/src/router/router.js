@@ -328,7 +328,7 @@ router.get('/api/verifiedKeys', (req, res, next) =>{
 })
 
 
-router.post('/login', (req, res, next) =>
+router.post('/api/login', (req, res, next) =>
 getRawBody(req)
 .then(admin => {
     return user.login(admin);
