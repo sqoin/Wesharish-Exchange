@@ -41,14 +41,16 @@ Vue.use(VeeValidate, {
 
 
 
-Vue.prototype.$currentUser = 41, 
+Vue.prototype.$currentUser = localStorage.getItem('id'), 
+//Vue.prototype.$currentUser=41 
 
 // Global Variables
 Vue.prototype.$http = Axios;
 
-//Vue.prototype.$myUrl = "https://sqoin.exchange";
+Vue.prototype.$myUrl = "http://exchange.weshareish.com";
 
-Vue.prototype.$myUrl = "http://18.218.152.243";
+Vue.prototype.$myUrlOauth = "http://18.221.180.139:8858/";
+Vue.prototype.$myUrlNode = "http://exchange.weshareish.com/";
 //Vue.prototype.$myUrll="http://localhost:8082/vue-dash-wallet/dist/";
 //"https://sqoin.exchange";
 //Vue.prototype.$currentUser ;

@@ -140,6 +140,7 @@ export default {
 
     removeToken() {
       localStorage.removeItem("token");
+       window.location.href = "/#/login";
       // window.location.href="https://sqoin.exchange/account/logout" ;
     }
   },

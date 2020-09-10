@@ -22,7 +22,7 @@
                   <p-checkbox>
                     Subscribe to newsletter
                   </p-checkbox>
-
+                  <a href="/#/register">Register</a>
                   <p-button native-type="submit" slot="footer" type="warning" round block class="mb-3">Get started</p-button>
                 </card>
               </form>
@@ -57,8 +57,90 @@
         document.body.classList.remove('off-canvas-sidebar')
       },
       login() {
+
+         let self = this ;
         // handle login here
-      }
+        //alert('details=>' + JSON.stringify(this.form))
+        let url = this.$myUrlOauth;
+        
+        let header1 = {
+            headers: {
+                Authorization: 'Basic ' + btoa('sqoinsqoin' + ':' + 'secret')
+              }
+          }
+        
+        console.log(JSON.stringify(this.form)  + "username " + this.form.username)
+      let body = new URLSearchParams()
+       body.append('username', this.form.username)
+      body.append('password', this.form.password)
+      body.append('grant_type', 'password');
+    
+       let header=JSON.parse(JSON.stringify(header1));
+       header.headers['Content-type']='application/x-www-form-urlencoded';
+        return new Promise(function(accept, reject) {
+        axios
+          .post(url + "/oauth/token", body.toString(), header)
+          .then(
+            response => {
+               
+                 localStorage.setItem('token', response.data.access_token);
+              
+               
+                
+              /*accept({
+              
+              }),
+              reject({})*/
+            }
+          )
+          .then(res=>{
+               self.loginNodejs()
+          })
+          .catch(error => {
+            console.log(error);
+            reject(error);
+          });
+      });
+      },
+
+        loginNodejs(){
+          
+          let self = this ;
+         
+          let url = this.$myUrlNode;
+         let body = {
+
+           "email":this.form.username ,
+
+           "password": this.form.password
+
+         }
+         return new Promise(function(accept, reject) {
+        axios
+          .post(url + "api/login", body)
+          .then(
+            response => {
+                //console.log("response => "+response.data.member.id)
+                localStorage.setItem('id', response.data.member.id);
+                self.$currentUser = response.data.member.id
+                window.location.href = "/#/";
+               
+                
+              /*accept({
+              
+              }),
+              reject({})*/
+            }
+          )
+          .catch(error => {
+            console.log(error);
+            reject(error);
+          })
+
+           })
+        }
+
+     
     },
     data() {
       return {

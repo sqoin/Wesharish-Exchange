@@ -9,8 +9,8 @@
               <div class="col-sm-12 mr-auto ml-auto">
                 <card type="signup" class="text-center" style="min-height:640px;">
                   <template slot="header">
-                    <h3 class="card-title" style="color:white;">Register As A Merchant</h3>
-                    <router-link to="./myprofile" style="text-decoration:none;">
+                    <h3 class="card-title" style="color:white;">Register</h3>
+                    <router-link to="./login" style="text-decoration:none;">
                       <el-button
                         class="back-btn"
                         icon="el-icon-arrow-left"
@@ -20,55 +20,57 @@
                     </router-link>
                   </template>
                   <el-form :model="form" ref="form" label-width="120px" class="demo-dynamic">
-                    <el-form-item prop="merchantId" label="Merchant ID:">
+                    <el-form-item prop="email" label="Email:">
                       <div class="col-sm-4">
-                        <fg-input required :error="getError('Merchant ID')">
+                        <fg-input required :error="getError('Email')">
                           <el-input
-                            name="Merchant ID"
+                            name="Email"
                             size="small"
-                            v-model="form.merchantId"
-                            v-validate="modelValidations.merchantId"
+                            v-model="form.email"
                           ></el-input>
                         </fg-input>
                       </div>
                     </el-form-item>
-                    <el-form-item
-                      v-for="(domain, index) in form.domains"
-                      :label="'Domain' +' '+ (index+1)"
-                      :key="domain.key"
-                      :prop="'domains.' + index + '.value'"
-                    >
+
+
+                      <el-form-item prop="password" label="Password:">
                       <div class="col-sm-4">
-                        <fg-input required :error="getError('Domain')">
+                        <fg-input required :error="getError('password')">
                           <el-input
-                            name="Domain"
+                            name="Email"
                             size="small"
-                            v-model="domain.value"
-                            v-validate="modelValidations.domain"
+                            v-model="form.password"
                           ></el-input>
-                          <el-button
-                            type="text"
-                            class="rm-btn"
-                            v-if="index!==0"
-                            style="position:absolute;float:left;margin-top:2%;"
-                            size="mini"
-                            @click.prevent="removeDomain(domain)"
-                            icon="el-icon-delete"
-                            circle
-                          ></el-button>
-                          <el-button
-                            type="text"
-                            class="add-btn"
-                            v-if="index===0"
-                            style="position:absolute;float:left;margin-top:2%;"
-                            size="mini"
-                            @click="addDomain"
-                            icon="el-icon-circle-plus-outline"
-                            circle
-                          ></el-button>
                         </fg-input>
                       </div>
                     </el-form-item>
+
+
+                  
+                   <el-form-item prop="firstname" label="First Name:">
+                      <div class="col-sm-4">
+                        <fg-input required :error="getError('First Name')">
+                          <el-input
+                            name="First Name"
+                            size="small"
+                            v-model="form.firstname"
+                          ></el-input>
+                        </fg-input>
+                      </div>
+                    </el-form-item>
+
+                     <el-form-item prop="lastname" label="Last Name:">
+                      <div class="col-sm-4">
+                        <fg-input required :error="getError('Last Name')">
+                          <el-input
+                            name="Last Name"
+                            size="small"
+                            v-model="form.lastname"
+                          ></el-input>
+                        </fg-input>
+                      </div>
+                    </el-form-item>
+                      
                     <el-form-item prop="mobile" label="Mobile number:">
                       <div class="col-sm-4">
                         <fg-input required :error="getError('Mobile number')">
@@ -77,6 +79,19 @@
                             size="small"
                             v-model="form.mobile"
                             v-validate="modelValidations.mobile"
+                          ></el-input>
+                        </fg-input>
+                      </div>
+                    </el-form-item>
+
+                    <el-form-item prop="zipCode" label="Zip Code:">
+                      <div class="col-sm-4">
+                        <fg-input required :error="getError('Zip Code')">
+                          <el-input
+                            name="Zip Code"
+                            size="small"
+                            v-model="form.zip"
+                           
                           ></el-input>
                         </fg-input>
                       </div>
@@ -140,23 +155,23 @@ export default {
         }
       },
       form: {
-        domains: [
-          {
-            key: 1,
-            value: ""
-          }
-        ],
-        merchantId: "",
+        email: "",
+        firstname:"",
+        lastname:"",
+        zip:"",
         mobile: "",
+        password: "",
         acceptTerms: false
       }
     };
   },
   methods: {
     submitForm(formName) {
+      let self = this;
       this.$validator.validateAll().then(res => {
         if (res && this.form.acceptTerms) {
-          alert("submit!");
+          self.register()
+       
         } else {
           return false;
         }
@@ -188,8 +203,86 @@ export default {
     },
     getError(fieldName) {
       return this.errors.first(fieldName);
-    }
+    },
+
+     updateUserInfromations(id){
+
+    let url = this.$myUrlNode;
+
+     let body = {
+
+           "firstname":this.form.firstname ,
+           "lastname": this.form.lastname,
+            "phone": this.form.mobile,
+             "zip": this.form.zip
+
+         }
+
+          return new Promise(function(accept, reject) {
+          axios
+          .put(url + "api/updateAdminDetails?id="+id, body)
+          .then(
+            response => {
+                 alert("success!")
+                window.location.href = "/#/login";
+               
+                
+              /*accept({
+              
+              }),
+              reject({})*/
+            }
+          )
+          .catch(error => {
+            console.log(error);
+            reject(error);
+          })
+
+           })
+
+  },
+
+  register(){
+      let self = this;
+     let url = this.$myUrlOauth;
+         let body = {
+
+           "email":this.form.email ,
+
+           "password": this.form.password
+
+         }
+         return new Promise(function(accept, reject) {
+        axios
+          .post(url + "app/register", body)
+          .then(
+            response => {
+              
+
+                let id =response.data.id
+                return id;
+               
+                
+              /*accept({
+              
+              }),
+              reject({})*/
+            }
+          )
+          .then(res=>{
+            console.log("ress"+res)
+              self.updateUserInfromations(res)
+          })
+          .catch(error => {
+            console.log(error);
+            reject(error);
+          })
+
+           })
   }
+  },
+
+ 
 };
 </script>
 <style scoped>

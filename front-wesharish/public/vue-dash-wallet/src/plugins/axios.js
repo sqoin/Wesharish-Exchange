@@ -28,7 +28,7 @@ const _axios = axios.create(config);
 _axios.interceptors.response.use(null, error => {
   if ((error.response.status === 401)) {
      if (localStorage.getItem('token') ===null){
-      window.location.href="https://sqoin.exchange/account/logout" ;
+      window.location.href="http://exchange.weshareish.com/#/Lock" ;
       localStorage.removeItem('token');
      }
 
