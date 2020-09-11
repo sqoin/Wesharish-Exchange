@@ -62,7 +62,7 @@ _publics.getBalance = (publicKey ) => {
     return new Promise((resolve, reject) => {
        bitcoin_rpc.init(localhost,port, username, password)
         
-        bitcoin_rpc.call('getbalance', [], function (err, res) {
+        bitcoin_rpc.call('getbalance', [publicKey], function (err, res) {
           if (err) {
             logger.error('err bastoji '+err);
            return  reject(err);
@@ -686,7 +686,7 @@ _publics.sendB=(res,coin, send)=>{
 function getBalance (publicKey ){
     return new Promise((resolve, reject) => {
        bitcoin_rpc.init(localhost,port, username, password)
-        bitcoin_rpc.call('getbalance', ['jtreaSQv3wApw6xpmaYb5Uh6PzijWzJeKG'], function (err, res) {
+        bitcoin_rpc.call('getbalance', [publicKey], function (err, res) {
           if (err) {
             logger.error(err);
            return  reject(err);

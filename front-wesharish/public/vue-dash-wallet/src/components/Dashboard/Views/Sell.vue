@@ -23,8 +23,9 @@
                 name="Amount"
                 clearable
                 v-model="model.amount"
-                v-validate="{required:true,decimal:true,max_value:available}"
-              ></el-input>
+                v-validate="{required:true,decimal:true,min_value:100}"
+                 
+              ></el-input><!---The minimum value of a redeem transaction is 100 FOR now, in order to keep the transactions clear-->
             </fg-input>
           </div>
           <div class="col-sm-8 mr-auto ml-auto">

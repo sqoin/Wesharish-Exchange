@@ -302,21 +302,21 @@ const routes = [
         name: "Settings",
         component: Settings
       },
-      {
+     /* {
         path: "editmyprofile",
         name: "EditMyProfile",
         component: EditMyProfile
-      },
+      },*/
       {
         path: "myprofile",
         name: "MyProfile",
         component: MyProfile
       },
-      {
+     /* {
         path: "myprofilesettings",
         name: "MyProfileSettings",
         component: MyProfileSettings
-      }
+      }*/
     ]
   },
   componentsMenu,

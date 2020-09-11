@@ -1,35 +1,71 @@
 <template>
-  <div class="myprofile">
-    <div class="row d-flex justify-content-center">
-      <div class="col-sm-12 mr-auto ml-auto">
-        <div class="card card-user">
-          <!-- <router-link to="./register" style="text-align:center;">
-            <el-button class="submit-btn" icon="el-icon-s-shop">Become a Merchant</el-button>
-          </router-link>-->
-          <div class="image"></div>
-          <div class="card-body">
-            <div class="author">
-              <img class="avatar border-gray" src="static/img/user-logo.png" alt="...">
-              <h5 class="title">{{user.first_name}}&nbsp;{{user.last_name}}</h5>
-              <p class="description">@{{user.user_name}}</p>
+<div class="myprofile">
+ <div class="card card-user " style="text-align:center;" >
+                <p style=" margin-top: 20px;"><img class="avatar border-gray" src="static/img/user-logo.png" alt="..."></p> 
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h5 class="title" >{{user.first_name}}&nbsp;{{user.last_name}}</h5>
+                    <p class="card-text description" style="font-size:18px;" >{{user.email}}</p>
+                  </h5>
+                  <table>
+                    <tr>
+                      <th>First Name</th>
+                      <td>{{user.first_name}}</td>
+                    </tr>
+                     <tr>
+                      <th>Last Name</th>
+                      <td>{{user.last_name}}</td>
+                      
+                    </tr>
+                       <tr>
+                      <th>Public Key</th>
+                      <td>{{this.wallet.publickey}}</td>
+                      
+                    </tr>
+                       <tr>
+                      <th>Balance </th>
+                      <td>{{this.wallet.balance}}</td>
+                      
+                    </tr>
+                  </table>
+
+            </div> 
+        </div>
+  </div>
+   <!--<div class="myprofile">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 mr-auto ml-auto">
+          <div class="card card-user">-->
+            <!--/////////////////////-->
+            <!-- <router-link to="./register" style="text-align:center;">
+              <el-button class="submit-btn" icon="el-icon-s-shop">Become a Merchant</el-button>
+            </router-link>-->
+            <!--/////////////////////-->
+            
+           <!-- <div class="image"></div>
+            <div class="card-body">
+              <div class="author">
+                <img class="avatar border-gray" src="static/img/user-logo.png" alt="...">
+                <h5 class="title" >{{user.first_name}}&nbsp;{{user.last_name}}</h5>-->
+               <!-- <p class="description">@{{user.user_name}}</p>-->
+             <!-- </div>-->
+             <!-- <p class="description text-center">"Bio.."</p>-->
+    
+              <!-- <div id="walletContent">
+                 <h3>Public Key:</h3>
+                  <p>{{this.wallet.publickey}}</p>
+                  <h3>Balance:</h3>
+                  <p>{{this.wallet.balance}}</p>
+                </div>
             </div>
-            <p class="description text-center">"Bio.."</p>
-          </div>
-
-          <div id="walletContent">
-            <h3>Public Key:</h3>
-            <p>{{this.wallet.publickey}}</p>
-            <h3>Balance:</h3>
-            <p>{{this.wallet.balance}}</p>
-          </div>
-
-          <div class="card-footer">
-            <div class="button-container"></div>
+            <div class="card-footer">
+              <div class="button-container"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+  </div>-->
+  
 </template>
 <script>
 import QrcodeVue from "qrcode.vue";
@@ -44,7 +80,7 @@ export default {
       wallet: [],
       loading: true,
       search: "",
-      usreId: ""
+      usreId: "",
     };
   },
   methods: {
@@ -53,8 +89,9 @@ export default {
         var bal = row[column.property];
         return Math.round(bal * 100) / 100;
       }
-    }
+    },
   },
+
   mounted: function() {
     // console.log("current =="+this.$currentUser);
     if (this.$currentUser === undefined) {
@@ -123,7 +160,7 @@ export default {
               response => (
                 (this.wallet = response.data),
                 (this.loading = false),
-                console.log(this.wallet)
+                console.log(JSON.stringify(this.wallet))
               )
             );
         });
@@ -131,33 +168,72 @@ export default {
   }
 };
 </script>
+
 <style scoped>
-.submit-btn {
+
+/*.submit-btn {
   border: 1px solid #b4bbbe;
 }
 .submit-btn:hover {
   background-color: transparent;
   color: #b4bbbe;
+}*/
+
+.myprofile{
+  background-color: #007bff;
+  padding: 20px 0 20px 0;
+}
+.card{
+  margin: auto;
+  width: 70%;
+  background-color: #F0EEEE;
+}
+table{
+  margin-top: 20px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  font-style: italic;
+}
+td{
+  font-weight: lighter;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-size: 17px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+td:hover{
+  font-size: 18px;
+  color: orangered;
+  font-weight: bold;
 }
 #walletContent {
   text-align: center;
-  width: 100%;
-  max-width: 400px;
+  padding-top:20px;
+  padding-bottom: 30px;
   margin: auto;
+  /*width: 100%;
+  max-width: 400px;
   background: #f4f5e7;
   border-radius: 5px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+ */
 }
 #walletContent h3 {
-  font-size: 17px;
   color: #9a9a9a;
   margin: 5px;
   font-weight: 600;
 }
-#walletContent p {
-  color: orange;
-  font-size: 14px;
+#walletContent p:hover {
+  color: #fd7e14;
+  font-size: 18px;
 }
 #walletContent p:last-of-type {
   margin: 0;

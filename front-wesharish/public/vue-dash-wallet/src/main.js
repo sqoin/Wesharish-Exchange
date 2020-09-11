@@ -25,6 +25,7 @@ import "./assets/sass/demo.scss";
 import sidebarLinks from "./sidebarLinks";
 import "./registerServiceWorker";
 import VueStripeCheckout from 'vue-stripe-checkout';
+
 // plugin setup
 Vue.component("downloadCsv", JsonCSV);
 Vue.use(VueClipboard);
@@ -48,9 +49,9 @@ Vue.prototype.$currentUser = localStorage.getItem('id'),
 Vue.prototype.$http = Axios;
 
 Vue.prototype.$myUrl = "http://exchange.weshareish.com";
-
 Vue.prototype.$myUrlOauth = "http://18.221.180.139:8858/";
 Vue.prototype.$myUrlNode = "http://exchange.weshareish.com/";
+
 //Vue.prototype.$myUrll="http://localhost:8082/vue-dash-wallet/dist/";
 //"https://sqoin.exchange";
 //Vue.prototype.$currentUser ;

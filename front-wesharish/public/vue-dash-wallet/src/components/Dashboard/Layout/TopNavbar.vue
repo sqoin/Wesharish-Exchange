@@ -18,7 +18,7 @@
     </div>
     <template slot="navbar-menu">
       <ul class="navbar-nav">
-        <drop-down tag="li" position="right" direction="none" class="nav-item btn-rotate dropdown">
+        <!--<drop-down tag="li" position="right" direction="none" class="nav-item btn-rotate dropdown">
           <a
             slot="title"
             slot-scope="{isOpen}"
@@ -39,8 +39,9 @@
             <img src="static/img/flags/SA.png">&nbsp;عربي
           </a>
         </drop-down>
+        -->
 
-        <drop-down
+        <!--<drop-down
           icon="nc-icon nc-bell-55"
           tag="li"
           position="right"
@@ -66,7 +67,15 @@
               href="#"
             >{{transaction.userfromname}} {{transaction.usertoname}} {{transaction.amount}} {{transaction.state}}</a>
           </div>
-        </drop-down>
+        </drop-down>-->
+        <div id="walletContent">
+          <div
+          ><img :src="'static/img/coin.jpg'" width="20px" height="20px">
+          <p>{{this.wallet.balance}} </p>
+          </div> 
+        
+        </div>
+                
         <drop-down
           icon="nc-icon nc-single-02"
           tag="li"
@@ -94,6 +103,7 @@
 <script>
 import { Navbar, NavbarToggleButton } from "src/components/UIComponents";
 export default {
+  props:['wallet'],
   components: {
     Navbar,
     NavbarToggleButton
@@ -105,7 +115,7 @@ export default {
       showNavbar: false,
       list: [],
       disabled: [],
-      transactionList: []
+      transactionList: [],
     };
   },
   methods: {
@@ -142,7 +152,7 @@ export default {
       localStorage.removeItem("token");
        window.location.href = "/#/login";
       // window.location.href="https://sqoin.exchange/account/logout" ;
-    }
+    },
   },
   mounted() {
     var self = this;
@@ -154,6 +164,66 @@ export default {
       var limit = 0;
       self.transactionList = response.data.slice(0, 5);
     });
+  
+  if (this.$currentUser === undefined) {
+      axios
+        .get(this.$myUrl + "/userWallet/api/users/current")
+        .then(
+          response => (
+            (this.$currentUser = response.data.id),
+            axios
+              .get(
+                this.$myUrl +
+                  "/api/getPublicAddressByUserId?coin=BASTOJI&userId=" +
+                  this.$currentUser,
+                { timeout: 300000 }
+              )
+              .then(res =>
+                axios
+                  .get(
+                    this.$myUrl +
+                      "/api/getBalance?coin=BASTOJI&publickey=" +
+                      res.publickey,
+                    { timeout: 300000 }
+                  )
+                  .then(
+                    response => (
+                      (this.wallet = response.data), (this.loading = false)
+                    )
+                  )
+              )
+          )
+        );
+    } else {
+      axios
+        .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser, {
+          timeout: 300000
+        })
+        .then(response => (this.user = response.data));
+      axios
+        .get(
+          this.$myUrl +
+            "/api/getPublicAddressByUserId?coin=BASTOJI&userId=" +
+            this.$currentUser,
+          { timeout: 300000 }
+        )
+        .then(res => {
+          axios
+            .get(
+              this.$myUrl +
+                "/api/getBalance?coin=BASTOJI&publickey=" +
+                res.data.publickey,
+              { timeout: 300000 }
+            )
+            .then(
+              response => (
+                (this.wallet = response.data),
+                (this.loading = false),
+                console.log(JSON.stringify(this.wallet)+"ddfsdfdfdsf")
+              )
+            );
+        });
+    }
   }
 };
 </script>
@@ -173,4 +243,21 @@ export default {
  li:hover > a .nc-icon {
   color: #fbc658 !important;
 }
+
+/*TODAY*/
+#walletContent {
+  text-align: center;
+  margin-top: 9px;
+}
+#walletContent div:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3); 
+}
+#walletContent p {
+  color: orange;
+  font-size: 14px;
+}
+/*#walletContent p:last-of-type {
+  margin: 0;
+}*/
 </style>
