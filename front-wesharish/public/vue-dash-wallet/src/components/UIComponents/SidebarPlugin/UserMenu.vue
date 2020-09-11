@@ -57,14 +57,12 @@ export default {
     }
   },
   mounted: function() {
-     axios
-      .get(this.$myUrl + "/userWallet/api/users/current")
-      .then(response =>(
-          (this.$currentUser = response.data.id),
+     
           axios
-              .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser,{ timeout: 100000 })
+              .get(this.$myUrl + "/api/getUserById?id=" + localStorage.getItem('id'),{ timeout: 100000 })
               .then(response => (this.user = response.data))
-      ));
+
+      
   }
 };
 </script>

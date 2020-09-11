@@ -873,7 +873,9 @@ export default {
       });
     });
     if (this.$currentUser === undefined) {
-      axios.get("https://sqoin.exchange/userWallet/api/users/current").then(
+
+      console.log("undefined")
+      /*axios.get("https://sqoin.exchange/userWallet/api/users/current").then(
         response => (
           (this.$currentUser = response.data.id),
           axios
@@ -888,7 +890,7 @@ export default {
               });
             })
         )
-      );
+      );*/
     }
     if (this.$currentUser !== null && this.$currentUser !== undefined) {
       // axios

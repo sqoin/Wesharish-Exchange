@@ -166,7 +166,8 @@ export default {
     });
   
   if (this.$currentUser === undefined) {
-      axios
+    console.log("undefined")
+     /* axios
         .get(this.$myUrl + "/userWallet/api/users/current")
         .then(
           response => (
@@ -193,7 +194,7 @@ export default {
                   )
               )
           )
-        );
+        );*/
     } else {
       axios
         .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser, {

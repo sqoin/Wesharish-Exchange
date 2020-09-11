@@ -243,11 +243,9 @@ export default {
     }
   },
   mounted: function() {
-    axios.get(this.$myUrl + "/userWallet/api/users/current").then(
-      response => (
-        (this.$currentUser = response.data.id),
+    
         axios
-          .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser, {
+          .get(this.$myUrl + "/api/getUserById?id=" + localStorage.getItem('id'), {
             timeout: 100000
           })
           .then(
@@ -263,7 +261,7 @@ export default {
             (this.model.email = response.data.email),
             (this.model.currency = response.data.currency)
           )
-      )
+      
     );
 
     /* axios
