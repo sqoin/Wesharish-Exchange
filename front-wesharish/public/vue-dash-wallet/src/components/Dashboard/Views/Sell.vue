@@ -23,7 +23,7 @@
                 name="Amount"
                 clearable
                 v-model="model.amount"
-                v-validate="{required:true,decimal:true,min_value:100}"
+                v-validate="{required:true,decimal:true,min_value:1}"
                  
               ></el-input><!---The minimum value of a redeem transaction is 100 FOR now, in order to keep the transactions clear-->
             </fg-input>
@@ -140,7 +140,7 @@ export default {
               focusConfirm: false,
               allowOutsideClick: false,
               onAfterClose: this.switchOnButton(),
-              progressSteps: ["1", "2"]
+              progressSteps: []
             })
             .queue([
               {
@@ -159,7 +159,7 @@ export default {
                   }
                 }
               },
-              {
+             /* {
                 html: '<div style="margin-left:17%;" id="captcha"/>',
                 onOpen: this.renderCaptcha,
                 preConfirm: function() {
@@ -167,7 +167,7 @@ export default {
                   else return false;
                 },
                 focusConfirm: false
-              }
+              }*/
             ])
             .then(result => {
               if (result.value) {

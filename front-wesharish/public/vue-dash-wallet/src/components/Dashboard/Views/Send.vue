@@ -24,7 +24,7 @@
                 id="Amount"
                 clearable
                 v-model="model.amount"
-                v-validate="{required: required,decimal:true,min_value:100}"
+                v-validate="{required: required,decimal:true,min_value:1}"
                 :disabled="disableInput"
               ></el-input><!---The minimum value for sending coins is 100 FOR now, in order to keep the transactions clear-->
             </fg-input>
@@ -278,7 +278,7 @@ export default {
               focusConfirm: false,
               allowOutsideClick: false,
               onAfterClose: this.switchOnButton(),
-              progressSteps: ["1", "2"]
+              progressSteps: []
             })
             .queue([
               {
@@ -297,7 +297,7 @@ export default {
                   }
                 }
               },
-              {
+             /* {
                 html: '<div style="margin-left:17%;" id="captcha"/>',
                 onOpen: this.renderCaptcha,
                 preConfirm: () => {
@@ -305,7 +305,7 @@ export default {
                   else return false;
                 },
                 focusConfirm: false
-              }
+              }*/
             ])
             .then(result => {
               if (result.value) {
