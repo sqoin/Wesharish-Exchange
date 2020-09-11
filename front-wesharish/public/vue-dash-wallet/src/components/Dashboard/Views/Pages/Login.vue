@@ -79,7 +79,7 @@
        header.headers['Content-type']='application/x-www-form-urlencoded';
         return new Promise(function(accept, reject) {
         axios
-          .post(url + "/oauth/token", body.toString(), header)
+          .post(url + "oauth/token", body.toString(), header)
           .then(
             response => {
                
@@ -104,7 +104,7 @@
       },
 
         loginNodejs(){
-          
+
           let self = this ;
          
           let url = this.$myUrlNode;
