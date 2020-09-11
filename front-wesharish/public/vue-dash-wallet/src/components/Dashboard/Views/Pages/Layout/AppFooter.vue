@@ -26,5 +26,6 @@ export default {
   name: "main-footer"
 };
 </script>
-<style>
+<style scoped>
+
 </style>

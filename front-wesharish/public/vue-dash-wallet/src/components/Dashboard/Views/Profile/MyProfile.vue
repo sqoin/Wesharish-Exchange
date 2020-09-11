@@ -1,37 +1,33 @@
 <template>
 <div class="myprofile">
- <div class="card card-user " style="text-align:center;" >
-                <p style=" margin-top: 20px;"><img class="avatar border-gray" src="static/img/user-logo.png" alt="..."></p> 
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <h5 class="title" >{{user.first_name}}&nbsp;{{user.last_name}}</h5>
-                    <p class="card-text description" style="font-size:18px;" >{{user.email}}</p>
-                  </h5>
-                  <table>
-                    <tr>
-                      <th>First Name</th>
-                      <td>{{user.first_name}}</td>
-                    </tr>
-                     <tr>
-                      <th>Last Name</th>
-                      <td>{{user.last_name}}</td>
-                      
-                    </tr>
-                       <tr>
-                      <th>Public Key</th>
-                      <td>{{this.wallet.publickey}}</td>
-                      
-                    </tr>
-                       <tr>
-                      <th>Balance </th>
-                      <td>{{this.wallet.balance}}</td>
-                      
-                    </tr>
-                  </table>
-
-            </div> 
-        </div>
+  <div class="card card-user " style="text-align:center;" >
+    <p style=" margin-top: 20px;"><img class="avatar border-gray" src="static/img/user-logo.png" alt="..."></p> 
+    <div class="card-body">
+      <h5 class="card-title">
+        <h5 class="title" >{{user.first_name}}&nbsp;{{user.last_name}}</h5>
+        <p class="card-text description" style="font-size:18px;" >{{user.email}}</p>
+      </h5>
+      <table>
+        <tr>
+          <th>First Name</th>
+          <td>{{user.first_name}}</td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td>{{user.last_name}}</td>
+        </tr>
+        <tr>
+          <th>Public Key</th>
+          <td>{{this.wallet.publickey}}</td>
+        </tr>
+        <tr>
+          <th>Balance </th>
+          <td>{{this.wallet.balance}}</td> 
+        </tr>
+      </table>
+    </div> 
   </div>
+</div>
    <!--<div class="myprofile">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-12 mr-auto ml-auto">
@@ -65,7 +61,6 @@
         </div>
       </div>
   </div>-->
-  
 </template>
 <script>
 import QrcodeVue from "qrcode.vue";
@@ -182,6 +177,7 @@ export default {
 .myprofile{
   background-color: #007bff;
   padding: 20px 0 20px 0;
+  width: 100%;
 }
 .card{
   margin: auto;
