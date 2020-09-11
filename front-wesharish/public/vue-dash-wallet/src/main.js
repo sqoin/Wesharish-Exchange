@@ -48,9 +48,14 @@ Vue.prototype.$currentUser = localStorage.getItem('id'),
 // Global Variables
 Vue.prototype.$http = Axios;
 
-Vue.prototype.$myUrl = "http://exchange.weshareish.com";
+/*Vue.prototype.$myUrl = "http://exchange.weshareish.com";
 Vue.prototype.$myUrlOauth = "http://18.221.180.139:8858/";
-Vue.prototype.$myUrlNode = "http://exchange.weshareish.com/";
+Vue.prototype.$myUrlNode = "http://exchange.weshareish.com/";*/
+
+
+Vue.prototype.$myUrl = "";
+Vue.prototype.$myUrlOauth = "/";
+Vue.prototype.$myUrlNode = "/";
 
 //Vue.prototype.$myUrll="http://localhost:8082/vue-dash-wallet/dist/";
 //"https://sqoin.exchange";
@@ -71,6 +76,10 @@ initProgress(router);
 /* eslint-disable no-new */
 new Vue({
   mounted: function() {
+
+    if ((localStorage.getItem('id') == undefined) || localStorage.getItem('id') == null || localStorage.getItem('id') == ""){
+      window.location.href = 'http://exchange.weshareish.com/#/login'
+    }
    /*
     axios
     .get(this.$myUrl + "/userWallet/api/users/current")
