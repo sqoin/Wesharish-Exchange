@@ -24,9 +24,9 @@
                 id="Amount"
                 clearable
                 v-model="model.amount"
-                v-validate="{required: required,decimal:true,max_value:available}"
+                v-validate="{required: required,decimal:true,min_value:100}"
                 :disabled="disableInput"
-              ></el-input>
+              ></el-input><!---The minimum value for sending coins is 100 FOR now, in order to keep the transactions clear-->
             </fg-input>
             <fg-input label="Recipient" required :error="getError('Recipient')">
               <el-select

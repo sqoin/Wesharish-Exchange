@@ -4,6 +4,11 @@ export default [
     icon: "nc-icon nc-bank",
     path: "/transactions"
   },
+   {
+    name: "Send",
+    icon: "nc-icon nc-send",
+    path: "/send"
+  },
  /* {
     name: "Market",
     icon: "nc-icon nc-shop",
@@ -21,7 +26,7 @@ export default [
   },*/
   {
     name: "Redeem",
-    icon: "nc-icon nc-send",
+    icon: "nc-icon nc-shop",
     path: "/redeem"
   },
   /*{
