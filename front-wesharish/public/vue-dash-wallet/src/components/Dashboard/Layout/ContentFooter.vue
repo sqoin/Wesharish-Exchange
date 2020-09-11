@@ -4,7 +4,7 @@
       <nav class="pull-left">
         <ul>
           <li>
-            <a href="https://sqoin.us">Contact US</a>
+            <a href="https://sqoin.us" >Contact US</a>
           </li>
         </ul>
       </nav>
@@ -20,5 +20,16 @@
 <script>
 export default {};
 </script>
-<style>
-</style>
+<style scoped>
+.copyright{
+  background-color: #E7E7EC;
+  font-family: Arial, 'Times New Roman', Times, serif;
+}
+.copyright a[rel]{
+  color: #0707FB;
+}
+.pull-left a:hover{
+  font-weight: bolder;
+}
+</style>>
+

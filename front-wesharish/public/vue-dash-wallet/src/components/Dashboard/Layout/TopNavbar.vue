@@ -217,8 +217,7 @@ export default {
             .then(
               response => (
                 (this.wallet = response.data),
-                (this.loading = false),
-                console.log(JSON.stringify(this.wallet)+"ddfsdfdfdsf")
+                (this.loading = false) 
               )
             );
         });
@@ -256,7 +255,4 @@ export default {
   color: orange;
   font-size: 14px;
 }
-/*#walletContent p:last-of-type {
-  margin: 0;
-}*/
 </style>
