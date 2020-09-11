@@ -58,31 +58,32 @@ function outputUtxos (utxos,addressTo,amountTo,addressFrom){
 }
 // return the balance value by user public key
 _publics.getBalance = (publicKey ) => {
-    logger.debug('here bastoji balance');
+    logger.debug('here bastoji balance')
     return new Promise((resolve, reject) => {
-       bitcoin_rpc.init(localhost,port, username, password)
-        
-        bitcoin_rpc.call('getbalance', [publicKey], function (err, res) {
-          if (err) {
-            logger.error('err bastoji '+err);
-           return  reject(err);
-          } else if (res.error) {
-            logger.error('error bastoji '+JSON.stringify(res.error));
+        bitcoin_rpc.init(localhost,port, username, password)
+        bitcoin_rpc.call('listunspent', [1 ,999999999 , [publicKey]], function (err, res) {
+            if (err) {
+                logger.error('err bastoji '+err);
+               return  reject(err);
+              } else if (res.error) {
+                logger.error('error bastoji '+JSON.stringify(res.error));
+                return reject(err);
+              } else {
+                  logger.info('res balance bastoji'+JSON.stringify(res));
+                  console.log("res  "+res.result);
+                  if((res.result==='') || (res.result===null)||(res.result===undefined)){
+                    return resolve({'balance' : 0,publickey:publicKey});
+                  }else{
+                      var balance = res.result.reduce( (t , i) => t + i.amount, 0)
+                      console.log("balanc "+balance);
+                  return resolve({'balance' : res.result.reduce( (t , i) => t + i.amount, 0),publickey:publicKey});
+              }
+            }
+          },(err)=>{
+            return  reject(err);
+          },(err)=>{
             return reject(err);
-          } else {
-              logger.info('res balance bastoji'+JSON.stringify(res));
-              if((res.result==='') || (res.result===null)||(res.result[publicKey]===undefined)){
-                return resolve({'balance' : 0,publickey:publicKey});
-              }else{
-              return resolve({'balance' : res.result[publicKey],publickey:publicKey});
-          }
-        }
-        },(err)=>{
-            return reject(err);
-        });
-    },(err)=>{
-        return reject(err);
-       // return resolve({'balance' : '120',publickey:publicKey});
+          }); 
     });
 }
 // return list of transaction by public key 
@@ -684,29 +685,37 @@ _publics.sendB=(res,coin, send)=>{
 
 // return the balance value by user public key
 function getBalance (publicKey ){
+    logger.debug('here getbalance function')
     return new Promise((resolve, reject) => {
-       bitcoin_rpc.init(localhost,port, username, password)
-        bitcoin_rpc.call('getbalance', [publicKey], function (err, res) {
-          if (err) {
-            logger.error(err);
-           return  reject(err);
-          } else if (res.error) {
-            logger.error(res.error);
+        bitcoin_rpc.init(localhost,port, username, password)
+        bitcoin_rpc.call('listunspent', [1 ,999999999 , [publicKey]], function (err, res) {
+            if (err) {
+                logger.error('err bastoji '+err);
+               return  reject(err);
+              } else if (res.error) {
+                logger.error('error bastoji '+JSON.stringify(res.error));
+                return reject(err);
+              } else {
+                  logger.info('res balance bastoji'+JSON.stringify(res));
+                  if((res.result==='') || (res.result===null)||(res.result[publicKey]===undefined)){
+                    return resolve({'balance' : 0,publickey:publicKey});
+                  }else{
+                    logger.info('res balance bastoji'+JSON.stringify(res));
+                    console.log("res  "+res.result);
+                    if((res.result==='') || (res.result===null)||(res.result===undefined)){
+                      return resolve({'balance' : 0,publickey:publicKey});
+                    }else{
+                        var balance = res.result.reduce( (t , i) => t + i.amount, 0)
+                        console.log("balanc "+balance);
+                    return resolve({'balance' : res.result.reduce( (t , i) => t + i.amount, 0),publickey:publicKey});
+                }
+              }
+            }
+          },(err)=>{
+            return  reject(err);
+          },(err)=>{
             return reject(err);
-          } else {
-             logger.info('list balance '+JSON.stringify(res));
-              if((res.result==='') || (res.result===null)||(res.result[publicKey]===undefined)){
-                return resolve({'balance' : 0,publickey:publicKey});
-              }else{
-              return resolve({'balance' : res.result[publicKey],publickey:publicKey});
-          }
-        }
-        },(err)=>{
-            return reject(err);
-        });
-    },(err)=>{
-        return reject(err);
-        //return resolve({'balance' : '120',publickey:publicKey});
+          }); 
     });
 }
 
