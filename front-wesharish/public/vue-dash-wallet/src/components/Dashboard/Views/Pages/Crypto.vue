@@ -83,13 +83,13 @@ export default {
   },
   mounted: function() {
     var self = this;
-    axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
+    /*axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
       var json = response.data;
       json.map(el => {
         self.listCoins.push({ coin: el.name });
       });
       this.loading = false;
-    });
+    });*/
   },
   methods: {
     handler(coin) {

@@ -511,12 +511,12 @@ export default {
       //window.location.href = "https://sqoin.exchange/account/sign-in";
     }
     var self = this;
-    axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
+    /*axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
       var json = response.data;
       json.map(el => {
         self.listCoins.push({ valueCoin: el.name, labelCoin: el.name });
       });
-    });
+    });*/
     if (this.$currentUser !== null && this.$currentUser !== undefined) {
       // axios
       //   .get(this.$myUrl + "/api/listAllBalance?userId=" + this.$currentUser)

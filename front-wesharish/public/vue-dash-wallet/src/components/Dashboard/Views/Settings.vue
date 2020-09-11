@@ -281,7 +281,7 @@ export default {
           self.wallets.map(el => {
             self.owned.push(el.coin);
           }),
-          axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
+         /* axios.get(this.$myUrl + "/api/getAllCoinName").then(response => {
             var json = response.data;
             json.map(el => {
               if (!self.owned.includes(el.name)) {
@@ -291,7 +291,7 @@ export default {
             self.coins.map(el => {
               self.disabled.push(el.value);
             });
-          }),
+          }),*/
           (this.loadingWallets = false)
         );
     }
