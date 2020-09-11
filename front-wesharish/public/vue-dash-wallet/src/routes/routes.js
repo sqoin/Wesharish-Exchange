@@ -30,7 +30,7 @@ import Icons from "src/components/Dashboard/Views/Components/Icons.vue";
 import Typography from "src/components/Dashboard/Views/Components/Typography.vue";
 
 //import Buy from "@/components/Dashboard/Views/Buy.vue";
-//import Send from "@/components/Dashboard/Views/Send.vue";
+import Send from "@/components/Dashboard/Views/Send.vue";
 import Sell from "@/components/Dashboard/Views/Sell.vue";
 import Support from "@/components/Dashboard/Views/Support.vue";
 import Transactions from "@/components/Dashboard/Views/Transactions.vue";
@@ -282,11 +282,11 @@ const routes = [
         name: "Buy",
         component: Buy
       },*/
-    /*  {
-        path: "sell",
-        name: "Sell",
-        component: Sell
-      },*/
+     {
+        path: "send",
+        name: "Send",
+        component: Send
+      },
       {
         path: "redeem",
         name: "Redeem",
