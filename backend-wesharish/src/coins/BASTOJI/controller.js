@@ -61,7 +61,7 @@ _publics.getBalance = (publicKey ) => {
     logger.debug('here bastoji balance')
     return new Promise((resolve, reject) => {
         bitcoin_rpc.init(localhost,port, username, password)
-        bitcoin_rpc.call('listunspent', [1 ,999999999 , [publicKey]], function (err, res) {
+        bitcoin_rpc.call('listunspent', [0 ,999999999 , [publicKey]], function (err, res) {
             if (err) {
                 logger.error('err bastoji '+err);
                return  reject(err);
@@ -91,7 +91,7 @@ function getListUnspent (publicKey ) {
    logger.debug('get list unspent')
     return new Promise((resolve, reject) => {
         bitcoin_rpc.init(localhost,port, username, password)
-        bitcoin_rpc.call('listunspent', [1 ,999999999 , [publicKey]], function (err, res) {
+        bitcoin_rpc.call('listunspent', [0 ,999999999 , [publicKey]], function (err, res) {
             if (err) {
                 logger.error("err == "+err);
                 return reject(err);
@@ -230,6 +230,7 @@ function sendTransaction (publicKey,amountTo,addressTo,descreptedPK){
 
 // all the steps for send sage by user id 
 _publics.send = (writeFunction, data) => {
+
     logger.debug('send function for bastoji '+JSON.stringify(data));
     var localTransaction;
     var leave;
@@ -280,6 +281,7 @@ _publics.send = (writeFunction, data) => {
                             return; 
                         }
                         decreptedPrivateKey=decreptedPrivateKeyResponse;
+                        console.log("=====> "+publicKey + " "+  publicKeyDestination + " DC "+decreptedPrivateKey)
                         sendTransaction(publicKey, data.amount, publicKeyDestination, decreptedPrivateKey)
                               .then((response)=>{
                                 logger.info("response == "+JSON.stringify(response));
@@ -688,7 +690,7 @@ function getBalance (publicKey ){
     logger.debug('here getbalance function')
     return new Promise((resolve, reject) => {
         bitcoin_rpc.init(localhost,port, username, password)
-        bitcoin_rpc.call('listunspent', [1 ,999999999 , [publicKey]], function (err, res) {
+        bitcoin_rpc.call('listunspent', [0 ,999999999 , [publicKey]], function (err, res) {
             if (err) {
                 logger.error('err bastoji '+err);
                return  reject(err);
