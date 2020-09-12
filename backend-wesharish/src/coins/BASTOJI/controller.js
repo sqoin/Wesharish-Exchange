@@ -46,7 +46,7 @@ function outputUtxos (utxos,addressTo,amountTo,addressFrom){
     console.log("addressFrom ==> "+addressFrom);
     var fees=0.0001;
     var newUtxos={};
-    var amount=0 ;
+    var amount=0.0 ;
       for (var i = 0; i < utxos.length; i++){
        var valeur =utxos[i].amount;
        amount = amount+valeur;
@@ -555,6 +555,7 @@ _publics.sellBastoji=(writefunc, coin, send)  => {
                             res.payload.responseFinal=responseFinal;                            
                             return _publics.emailDao.getEmailById((send).from)
                                 .then((emailTo)=>{
+                                    console.log("email => "+emailTo)
                                     res.payload.emailTo=emailTo;
                                     return _publics.user.getUserNameById((send).from)
                                     .then((username)=>{
