@@ -260,9 +260,9 @@ export default {
             (this.model.address = response.data.address),
             (this.model.email = response.data.email),
             (this.model.currency = response.data.currency)
-          )
+          );
       
-    );
+  
 
     /* axios
       .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser)

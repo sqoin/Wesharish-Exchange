@@ -31,10 +31,10 @@ function mailBASTOJI(emailTo,username,transactionID,amount ) {
       from:from, 
       to: emailTo, 
       subject: subject, 
-      text: 'Dear '+username+''+  'Thank you for your withdrawal request. We can confirm the request has now been received and the withdrawal should appear within your account within 72 hours. Your receipt can be found here: "http://explorer.sqoin.us/#/tx/'+transactionID+ '"'+' Kind regard'+
+      text: 'Dear '+username+''+  'Thank you for your withdrawal request. We can confirm the request has now been received and the withdrawal should appear within your account within 72 hours. Your receipt can be found here: "http://explorer.weshareish.com/#/tx/'+transactionID+ '"'+' Kind regard'+
       'SQOIN. ', 
-      html: 'Dear <b>'+username+'</b>'+'\n'+  'Thank you for your withdrawal request. We can confirm the request has now been received and the withdrawal should appear within your account within 72 hours. Your receipt can be found here:<b> <a href="http://explorer.sqoin.us/#/tx/'+transactionID+'">'+transactionID +'</a>  </b>'+'\n Kind regard\n'+
-      'SQOIN. \n',  
+      html: 'Dear <b>'+username+'</b>'+'\n'+  'Thank you for your withdrawal request. We can confirm the request has now been received and the withdrawal should appear within your account within 72 hours. Your receipt can be found here:<b> <a href="http://explorer.weshareish.com/#/tx/'+transactionID+'">'+transactionID +'</a>  </b>'+'\n Kind regard\n'+
+      'Unicef. \n',  
   });
  
   return resolve( info);

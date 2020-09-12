@@ -77,7 +77,7 @@ export default {
         coin: coinName,
         native: "true",
         amount: this.model.amount,
-        from: this.$currentUser,
+        from: localStorage.getItem('id'),
         pin: this.pin,
         to: 9
       };
@@ -266,7 +266,7 @@ export default {
                                 break;
                               case "BASTOJI":
                                 // console.log("bastoji");
-                                this.getUserById(this.$currentUser).then(userTo => {
+                                this.getUserById(9).then(userTo => {
                                   swal
                                     .fire({
                                       title: "SUCCESS!",
@@ -302,7 +302,7 @@ export default {
                                     .then(result => {
                                       if (result.value) {
                                         this.getUserById(
-                                          this.$currentUser
+                                          localStorage.getItem('id')
                                         ).then(userFrom => {
                                           this.generatePDF(
                                             userTo,
@@ -379,7 +379,7 @@ export default {
                             break;
                           case "BASTOJI":
                             console.log("bastoji");
-                            this.getUserById(usergallery).then(userTo => {
+                            this.getUserById(9).then(userTo => {
                               swal
                                 .fire({
                                   title: "SUCCESS!",
@@ -414,7 +414,7 @@ export default {
                                 })
                                 .then(result => {
                                   if (result.value) {
-                                    this.getUserById(this.$currentUser).then(
+                                    this.getUserById(localStorage.getItem('id')).then(
                                       userFrom => {
                                         this.generatePDF(
                                           userTo,
@@ -498,11 +498,11 @@ export default {
     getUserById(uId) {
       let url = this.$myUrl;
       return new Promise(function(accept, reject) {
-        if (this.$currentUser !== null && this.$currentUser !== undefined) {
+        
           axios.get(url + "/api/getUserById?id=" + uId).then(response => {
             accept(response.data.first_name + " " + response.data.last_name);
           });
-        }
+        
       });
     }
   },
@@ -517,7 +517,7 @@ export default {
         self.listCoins.push({ valueCoin: el.name, labelCoin: el.name });
       });
     });*/
-    if (this.$currentUser !== null && this.$currentUser !== undefined) {
+    
       // axios
       //   .get(this.$myUrl + "/api/listAllBalance?userId=" + this.$currentUser)
       //   .then(response => {
@@ -527,7 +527,7 @@ export default {
       //     });
       //   });
       axios
-        .get(this.$myUrl + "/api/getUserById?id=" + this.$currentUser, {
+        .get(this.$myUrl + "/api/getUserById?id=" + localStorage.getItem('id'), {
           timeout: 300000
         })
         .then(response => (this.user = response.data));
@@ -535,7 +535,7 @@ export default {
         .get(
           this.$myUrl +
             "/api/getPublicAddressByUserId?coin=BASTOJI&userId=" +
-            this.$currentUser,
+            localStorage.getItem('id'),
           { timeout: 300000 }
         )
         .then(res => {
@@ -548,7 +548,7 @@ export default {
             )
             .then(response => (this.available = response.data.balance));
         });
-    }
+    
   }
 };
 </script>
