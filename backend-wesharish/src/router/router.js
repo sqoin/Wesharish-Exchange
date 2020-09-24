@@ -202,10 +202,15 @@ coin.generatePrivateKey (req,res)
 
 
 
-  
 //get private key and create it if it does not exist
 router.post('/api/generatePrivateKeyAndPublicKey', (req, res, next) =>{  
   coin.generatePrivateKeyAndPublicKey (req,res)
+  });
+
+  
+//get private key and create it if it does not exist
+router.post('/api/deleteWallet', (req, res, next) =>{  
+  coin.deleteWallet (req,res)
   });
 /*waiting*/
 //get public key

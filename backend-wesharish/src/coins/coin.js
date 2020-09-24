@@ -38,6 +38,29 @@ _publics.generatePrivateKeyAndPublicKey = (req, res) => {
 
 
 
+_publics.deleteWallet = (req, res) => {
+    return deleteWallet(req, res);
+}
+
+
+
+function deleteWallet(req, res) {
+    logger.info("here is generate keys!");
+    var storage;
+    _publics.requestUtils.getRawBody(req)
+    .then(body => {
+    var object = JSON.parse(body);
+    res.payload.userId = object.userId;
+    res.payload.coin = object.coin;
+    storage =target+'target'+res.payload.coin;
+    _publics.fileUtil.deleteExistingFolder(res, storage + "/" + res.payload.userId)
+    .then((path) =>res.send(path)
+                
+        )
+    })
+    
+}
+
 
 
 function generatePrivateKeyAndPublicKey(req, res) {
