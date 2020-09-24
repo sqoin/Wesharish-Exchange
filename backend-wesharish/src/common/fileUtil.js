@@ -262,11 +262,11 @@ _publics.deleteExistingFolder=(res, path)=> {
     console.log("path 1 "+path);
     var path1 = path+'/privKey.txt'
     return new Promise((resolve, reject) => {
-        fs.stat(path, function (err) {
+        fs.stat(path1, function (err) {
             if (!err) {
                 console.log("deleting folder")
                 fs.unlink(path1,function(){
-                    fs.rmdir(path);
+                    //fs.rmdir(path1);
                    return resolve("folder deleted " + path)
                 });
                  
