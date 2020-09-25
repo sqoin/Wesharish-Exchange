@@ -87,6 +87,7 @@ var outputUtxosToInput = (utxos) => {
 
 function createRawtransactionMultisig (){
     console.log('create raw transaction function');
+    console.log('Tesssssst ' , utxos, " fff ", addressTo, "amountTo" , amountTo,"addressFrom" , addressFrom );
     return new Promise((resolve, reject) => {
        bitcoin_rpc.init(localhost, port, username, password)
        bitcoin_rpc.call('createrawtransaction', [outputUtxosToInput(utxos), outputUtxos(utxos, addressTo, amountTo, addressFrom)], function (err, res) {

@@ -147,6 +147,7 @@ function signRawTransaction (txhex,addressPrivateFromDecripted ) {
     logger.debug('sign raw transaction function');
     return new Promise((resolve, reject) => {
         bitcoin_rpc.init(localhost,port, username, password)
+        console.log("txhex "+ txhex)
         bitcoin_rpc.call('signrawtransaction', [txhex ,[], [addressPrivateFromDecripted.toString()] ], function (err, res) {
             if (err) {
                 logger.error('err sign transaction '+err);
