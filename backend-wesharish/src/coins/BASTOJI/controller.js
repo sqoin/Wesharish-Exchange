@@ -384,7 +384,7 @@ function generatePublicKey (){
     return new Promise((resolve, reject) => {
         bitcoin_rpc.init(localhost,port, username, password)
         console.log("connect");
-        bitcoin_rpc.call('getnewaddress', [], function (err, res) {
+        bitcoin_rpc.call('getnewaddress', ["default","legacy"], function (err, res) {
             console.log("res "+res);
             console.log("err "+err);
             if (err) {

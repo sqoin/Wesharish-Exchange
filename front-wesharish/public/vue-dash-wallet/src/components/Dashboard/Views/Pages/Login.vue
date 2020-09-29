@@ -58,9 +58,7 @@
       },
       login() {
 
-         let self = this ;
-        // handle login here
-        //alert('details=>' + JSON.stringify(this.form))
+        let self = this ;
         let url = this.$myUrlOauth;
         
         let header1 = {
@@ -69,9 +67,9 @@
               }
           }
         
-        console.log(JSON.stringify(this.form)  + "username " + this.form.username)
+      console.log(JSON.stringify(this.form)  + "username " + this.form.username)
       let body = new URLSearchParams()
-       body.append('username', this.form.username)
+      body.append('username', this.form.username)
       body.append('password', this.form.password)
       body.append('grant_type', 'password');
     
@@ -82,15 +80,7 @@
           .post(url + "oauth/token", body.toString(), header)
           .then(
             response => {
-               
                  localStorage.setItem('token', response.data.access_token);
-              
-               
-                
-              /*accept({
-              
-              }),
-              reject({})*/
             }
           )
           .then(res=>{
@@ -108,36 +98,29 @@
           let self = this ;
          
           let url = this.$myUrlNode;
-         let body = {
+          let body = {
 
            "email":this.form.username ,
-
            "password": this.form.password
 
-         }
-         return new Promise(function(accept, reject) {
-        axios
-          .post(url + "api/login", body)
-          .then(
-            response => {
-                //console.log("response => "+response.data.member.id)
-                localStorage.setItem('id', response.data.member.id);
-                self.$currentUser = response.data.member.id
-                window.location.href = "/#/";
-               
-                
-              /*accept({
-              
-              }),
-              reject({})*/
-            }
-          )
-          .catch(error => {
-            console.log(error);
-            reject(error);
-          })
+          }
+            return new Promise(function(accept, reject) {
+            axios
+              .post(url + "api/login", body)
+              .then(
+                response => {
+                    //console.log("response => "+response.data.member.id)
+                    localStorage.setItem('id', response.data.member.id);
+                    self.$currentUser = response.data.member.id
+                    window.location.href = "/#/";
+                }
+              )
+              .catch(error => {
+                console.log(error);
+                reject(error);
+              })
 
-           })
+              })
         }
 
      

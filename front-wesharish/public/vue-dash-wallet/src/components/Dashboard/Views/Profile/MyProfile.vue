@@ -18,7 +18,13 @@
         </tr>
         <tr>
           <th>Public Key</th>
-          <td>{{this.wallet.publickey}}</td>
+          <td>
+          {{this.wallet.publickey}}
+          <qrcode-vue :value="this.wallet.publickey" :size="size" level="H"></qrcode-vue>
+
+          
+          
+          </td>
         </tr>
         <tr>
           <th>Balance </th>
@@ -64,6 +70,7 @@
 </template>
 <script>
 import QrcodeVue from "qrcode.vue";
+
 export default {
   components: {
     QrcodeVue

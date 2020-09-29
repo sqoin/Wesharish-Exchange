@@ -79,7 +79,7 @@ export default {
         amount: this.model.amount,
         from: localStorage.getItem('id'),
         pin: this.pin,
-        to: 9
+        to: 360
       };
       let url = this.$myUrl;
 
